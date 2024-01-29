@@ -16,44 +16,39 @@ public class MovimentsPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(new Vector3(0, velocitatPlayer*Time.deltaTime, 0));
         }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(new Vector3(0, -velocitatPlayer * Time.deltaTime, 0));
-        }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(new Vector3(-velocitatPlayer * Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(new Vector3(velocitatPlayer * Time.deltaTime, 0, 0));
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(new Vector3(0, velocitatPlayer * Time.deltaTime, 0));
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
             transform.Translate(new Vector3(0, -velocitatPlayer * Time.deltaTime, 0));
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(new Vector3(-velocitatPlayer * Time.deltaTime, 0, 0));
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(new Vector3(velocitatPlayer * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.W))
         {
+            transform.Translate(new Vector3(0, velocitatPlayer * Time.deltaTime, 0));
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(new Vector3(0, -velocitatPlayer * Time.deltaTime, 0));
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(new Vector3(-velocitatPlayer * Time.deltaTime, 0, 0));
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
             transform.Translate(new Vector3(velocitatPlayer * Time.deltaTime, 0, 0));
         }
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(new Vector2(0, 100));
-        }*/
 
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

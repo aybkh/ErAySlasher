@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vides: 3
-  velocitatPlayer: 0
+  velocitatPlayer: 20
 --- !u!60 &647839839
 PolygonCollider2D:
   m_ObjectHideFlags: 0
