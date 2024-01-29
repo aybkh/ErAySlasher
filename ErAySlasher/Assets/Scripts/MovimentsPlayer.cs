@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimentsNau : MonoBehaviour
+public class MovimentsPlayer : MonoBehaviour
 {
     public int vides = 3;
-    public float velocitatNau;
+    public float velocitatPlayer;
     
     // Start is called before the first frame update
     void Start()
@@ -18,35 +18,35 @@ public class MovimentsNau : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(new Vector3(0, velocitatNau*Time.deltaTime, 0));
+            transform.Translate(new Vector3(0, velocitatPlayer*Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(new Vector3(0, -velocitatNau * Time.deltaTime, 0));
+            transform.Translate(new Vector3(0, -velocitatPlayer * Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(new Vector3(-velocitatNau * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(-velocitatPlayer * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(new Vector3(velocitatNau * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(velocitatPlayer * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(new Vector3(0, velocitatNau * Time.deltaTime, 0));
+            transform.Translate(new Vector3(0, velocitatPlayer * Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(new Vector3(0, -velocitatNau * Time.deltaTime, 0));
+            transform.Translate(new Vector3(0, -velocitatPlayer * Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(new Vector3(-velocitatNau * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(-velocitatPlayer * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(new Vector3(velocitatNau * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(velocitatPlayer * Time.deltaTime, 0, 0));
         }
         /*if (Input.GetKeyDown(KeyCode.Space))
         {
