@@ -8,7 +8,7 @@ public class DispararBalas : MonoBehaviour
     public Transform Enemic1, Enemic2; // El objeto al que se disparará
 
     public float fireRate = 1f; // Velocidad de disparo en disparos por segundo
-    private float tempsDispar = 0.3f; // Tiempo para el próximo disparo
+    private float tempsDispar = 0f; // Tiempo para el próximo disparo
 
     // Update is called once per frame
     void Update()
@@ -27,13 +27,9 @@ public class DispararBalas : MonoBehaviour
     {
         // Instanciar la bala
         GameObject bullet = Instantiate(Bala, transform.position, Quaternion.identity) ;
-        // Calcular la dirección hacia el objetivo
+        Destroy(bullet, 2.0f);
         Vector3 direction = (Enemic1.position - transform.position).normalized;
         // Obtener el componente de movimiento de la bala y establecer su dirección
         MovimentsBala bulletMovement = bullet.GetComponent<MovimentsBala>();
-        if (bulletMovement != null)
-        {
-            bulletMovement.SetDirection(direction);
-        }
     }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Enemic1
+  - Enemic2
   - Enemic
   layers:
   - Default
@@ -13,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Projectils/Enemic
   - 
   - 
   - 
