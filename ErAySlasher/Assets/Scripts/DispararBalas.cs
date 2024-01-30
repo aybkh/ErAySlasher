@@ -7,8 +7,8 @@ public class DispararBalas : MonoBehaviour
     public GameObject Bala; // El prefab de la bala
     public Transform Enemic1, Enemic2; // El objeto al que se disparará
 
-    public float fireRate = 1f; // Velocidad de disparo en disparos por segundo
-    private float tempsDispar = 0f; // Tiempo para el próximo disparo
+    public float fireRate = 0.1f; // Velocidad de disparo en disparos por segundo
+    private float tempsDispar = 0.3f; // Tiempo para el próximo disparo
 
     // Update is called once per frame
     void Update()
