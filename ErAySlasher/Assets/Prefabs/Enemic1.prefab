@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 606583928227594515}
   - component: {fileID: 4615073976071819793}
   - component: {fileID: 825460855428077346}
-  - component: {fileID: 7431273808298495816}
   - component: {fileID: 6490592062630827440}
   m_Layer: 0
   m_Name: Enemic1
@@ -262,20 +261,6 @@ PolygonCollider2D:
       - {x: -0.17, y: -0.24}
       - {x: -0.17, y: -0.22999999}
   m_UseDelaunayMesh: 0
---- !u!114 &7431273808298495816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3144476829433705785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocitatMissil: 2
-  player: {fileID: 4766290445006492363, guid: 01d01a508e084614aadea488931f041a, type: 3}
 --- !u!50 &6490592062630827440
 Rigidbody2D:
   serializedVersion: 4

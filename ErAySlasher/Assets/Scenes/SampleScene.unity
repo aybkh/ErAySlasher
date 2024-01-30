@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab61fbab23564bc488007e044113d94c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUp: {fileID: 2605797416172461777, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
+  Enemic1: {fileID: 0}
 --- !u!4 &454532254
 Transform:
   m_ObjectHideFlags: 0
@@ -881,7 +881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4367dad8b91dbaa4ba0c2441c6ac0746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vides: 3
   velocitatPlayer: 7
 --- !u!1 &932288560
 GameObject:
@@ -1172,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab61fbab23564bc488007e044113d94c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerUp: {fileID: 3144476829433705785, guid: 890a2a4f1c029e64fa2fb0fe11fa1f30, type: 3}
+  Enemic1: {fileID: 2605797416172461777, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
 --- !u!4 &1707345203
 Transform:
   m_ObjectHideFlags: 0

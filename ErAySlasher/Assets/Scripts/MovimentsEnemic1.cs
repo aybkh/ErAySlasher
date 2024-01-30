@@ -7,7 +7,8 @@ public class MovimentsEnemic1 : MonoBehaviour
     public float velocitatBala = 2f;
     public GameObject player;
     private Rigidbody2D rb;
-    string tag = "Enemic";
+    string tag = "Player";
+    public int videsEnemic = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +33,12 @@ public class MovimentsEnemic1 : MonoBehaviour
        
         if(collision.gameObject.tag == "bala")
         {
-            Destroy(this.gameObject, 0.1f);
-            Destroy(collision.gameObject);
+            videsEnemic--;
+            if(videsEnemic <=0)
+            {
+                Destroy(this.gameObject, 0.1f);
+                Destroy(collision.gameObject);
+            }
         }
     }
     
