@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8029610466637168665}
   - component: {fileID: 4583332916118672742}
   - component: {fileID: 7506485557844560844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemic2
-  m_TagString: Enemic
+  m_TagString: Enemic2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,8 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatMissil: 2
-  player: {fileID: 4766290445006492363, guid: 01d01a508e084614aadea488931f041a, type: 3}
+  velocitatProjectil: 0
+  Enemic1: {fileID: 0}
+  Enemic2: {fileID: 0}
 --- !u!50 &7506485557844560844
 Rigidbody2D:
   serializedVersion: 4

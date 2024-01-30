@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 825460855428077346}
   - component: {fileID: 7431273808298495816}
   - component: {fileID: 6490592062630827440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemic1
   m_TagString: Enemic
   m_Icon: {fileID: 0}
@@ -274,8 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatMissil: 2
-  player: {fileID: 4766290445006492363, guid: 01d01a508e084614aadea488931f041a, type: 3}
+  velocitatProjectil: 0
+  Enemic1: {fileID: 0}
+  Enemic2: {fileID: 0}
 --- !u!50 &6490592062630827440
 Rigidbody2D:
   serializedVersion: 4
