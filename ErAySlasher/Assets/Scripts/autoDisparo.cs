@@ -18,7 +18,7 @@ public class autoDisparo : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
-            if (hit.collider.CompareTag("Enemy"))
+            if (hit.collider.CompareTag("Enemic"))
             {
                 // Aplicar daño al enemigo
                 mortEnemic videsEnemic = hit.collider.GetComponent<mortEnemic>();
