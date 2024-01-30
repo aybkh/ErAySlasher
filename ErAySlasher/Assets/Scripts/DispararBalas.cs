@@ -26,7 +26,7 @@ public class DispararBalas : MonoBehaviour
     void Shoot()
     {
         // Instanciar la bala
-        GameObject bullet = Instantiate(Bala, transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(Bala, transform.position, Quaternion.identity) ;
         // Calcular la dirección hacia el objetivo
         Vector3 direction = (Enemic1.position - transform.position).normalized;
         // Obtener el componente de movimiento de la bala y establecer su dirección
