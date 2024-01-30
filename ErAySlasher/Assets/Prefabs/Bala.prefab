@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8022388914774722967}
   - component: {fileID: 9194156329547698854}
   - component: {fileID: 6163233690134265396}
-  - component: {fileID: 3643946267303642225}
+  - component: {fileID: 7131730193532149716}
   m_Layer: 0
   m_Name: Bala
   m_TagString: Untagged
@@ -259,7 +259,7 @@ PolygonCollider2D:
       - {x: -1.02, y: 0.56}
       - {x: -2.6733708, y: 0.9351943}
   m_UseDelaunayMesh: 0
---- !u!114 &3643946267303642225
+--- !u!114 &7131730193532149716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,8 +268,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4310630187998879859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f21787754840ba4c8ec2a47eb248428, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatBala: 10
-  bala: {fileID: 3144476829433705785, guid: 890a2a4f1c029e64fa2fb0fe11fa1f30, type: 3}
+  speed: 10
