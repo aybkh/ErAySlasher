@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4548317451741362939}
   - component: {fileID: 4411223866547707997}
   - component: {fileID: 8029610466637168665}
-  - component: {fileID: 4583332916118672742}
   - component: {fileID: 7506485557844560844}
-  m_Layer: 6
+  - component: {fileID: 6049512651655211610}
+  m_Layer: 0
   m_Name: Enemic1
   m_TagString: Enemic1
   m_Icon: {fileID: 0}
@@ -236,21 +236,6 @@ PolygonCollider2D:
       - {x: 0.66999996, y: 0.22}
       - {x: 0.66999996, y: 0.22999999}
   m_UseDelaunayMesh: 0
---- !u!114 &4583332916118672742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2605797416172461777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocitatProjectil: 0
-  Enemic1: {fileID: 0}
-  Enemic2: {fileID: 0}
 --- !u!50 &7506485557844560844
 Rigidbody2D:
   serializedVersion: 4
@@ -278,3 +263,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6049512651655211610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605797416172461777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f21787754840ba4c8ec2a47eb248428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocitatBala: 4
+  player: {fileID: 0}
+  videsEnemic: 3

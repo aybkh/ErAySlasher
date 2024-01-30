@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovimentsPlayer : MonoBehaviour
 {
-    public int vides = 100;
     public float velocitatPlayer;
     
     // Start is called before the first frame update
@@ -49,22 +48,5 @@ public class MovimentsPlayer : MonoBehaviour
             transform.Translate(new Vector3(velocitatPlayer * Time.deltaTime, 0, 0));
         }
 
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.gameObject.tag == "Enemic")
-        {
-            vides = vides - 5;
-            if(vides<=0)
-            {
-                Destroy(this.gameObject);
-                Destroy(collision.gameObject);
-            }
-        }
-    }
-    public int misVides()
-    {
-        return vides;
     }
 }
