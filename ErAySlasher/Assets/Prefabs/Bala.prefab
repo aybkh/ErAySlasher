@@ -272,5 +272,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocitatProjectil: 20
-  Enemic1: {fileID: 3144476829433705785, guid: 890a2a4f1c029e64fa2fb0fe11fa1f30, type: 3}
+  Enemic1: {fileID: 2605797416172461777, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
   Enemic2: {fileID: 2605797416172461777, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
