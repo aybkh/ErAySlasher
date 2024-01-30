@@ -2,43 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimentsBala1 : MonoBehaviour
+public class MovimentsEnemic1 : MonoBehaviour
 {
-    public float velocitatBala = 0.01f;
-    public GameObject bala;
-    private Rigidbody2D rbi;
-    private int punts = 2;
-    string taga = "Enemic";
+    public float velocitatBala = 2f;
+    public GameObject player;
+    private Rigidbody2D rb;
+    string tag = "Enemic";
     // Start is called before the first frame update
     void Start()
     {
-        rbi = GetComponent<Rigidbody2D>();
-        bala = GameObject.FindGameObjectWithTag(taga);
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag(tag);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bala!=null)
+        if (player != null)
         {
-            Vector3 direccio = (bala.transform.position - rbi.transform.position);
+            Vector3 direccio = (player.transform.position - rb.transform.position);
             direccio.Normalize();
             //this.gameObject.transform.rotation = Quaternion.LookRotation(direccio);
-            rbi.velocity = direccio * velocitatBala;
+            rb.velocity = direccio * velocitatBala;
         }
     }
-    /*
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
         if(collision.gameObject.tag == "bala")
         {
-            GameManager controlador = FindObjectOfType<GameManager>();
-            controlador.sumaScore(punts);
-
             Destroy(this.gameObject, 0.1f);
             Destroy(collision.gameObject);
         }
     }
-    */
+    
 }

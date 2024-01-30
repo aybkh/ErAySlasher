@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimentsPlayer : MonoBehaviour
 {
-    public int vides = 3;
+    public int vides = 100;
     public float velocitatPlayer;
     
     // Start is called before the first frame update
@@ -53,40 +53,15 @@ public class MovimentsPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.gameObject.tag == "enemic")
+        if (collision.gameObject.tag == "Enemic")
         {
-            vides--;
-            if(vides==0)
+            vides = vides - 5;
+            if(vides<=0)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
             }
         }
-
-        
-        
-        if (collision.gameObject.tag == "missil")
-            {
-            Destroy(collision.gameObject);
-            vides--;
-            if (vides == 0)
-            {
-                Destroy(this.gameObject);
-                Destroy(collision.gameObject);
-            }
-        }
-
-        if (collision.gameObject.tag == "Planeta")
-        {
-            vides=0;
-            Destroy(this.gameObject);
-        }
-        if (collision.gameObject.tag == "Cor")
-        {
-            Destroy(collision.gameObject);
-            vides++;
-        }
-
     }
     public int misVides()
     {
