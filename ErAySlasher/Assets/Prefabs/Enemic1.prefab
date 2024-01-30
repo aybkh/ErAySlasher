@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7506485557844560844}
   - component: {fileID: 6049512651655211610}
   m_Layer: 0
-  m_Name: Enemic2
-  m_TagString: Enemic
+  m_Name: Enemic1
+  m_TagString: Enemic1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,3 +277,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocitatBala: 4
   player: {fileID: 0}
+  videsEnemic: 3
