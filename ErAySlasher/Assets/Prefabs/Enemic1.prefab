@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4411223866547707997}
   - component: {fileID: 8029610466637168665}
   - component: {fileID: 7506485557844560844}
-  - component: {fileID: 6049512651655211610}
+  - component: {fileID: -822594294246465410}
   m_Layer: 0
   m_Name: Enemic1
   m_TagString: Enemic1
@@ -263,7 +263,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6049512651655211610
+--- !u!114 &-822594294246465410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f21787754840ba4c8ec2a47eb248428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatBala: 4
-  player: {fileID: 0}
-  videsEnemic: 3
+  velocitatEnemic: 1
+  player: {fileID: 2570556122888580922, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
+  videsEnemic: 2
+  prefabRecogibleSalud: {fileID: 550344582983917638, guid: 394eafe2c7f6af848abcdadd44053f1c, type: 3}
+  "probabilidadDeCa\xEDda": 0.3

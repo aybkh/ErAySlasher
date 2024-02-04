@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7131730193532149716}
   m_Layer: 6
   m_Name: Bala
-  m_TagString: Untagged
+  m_TagString: bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -271,6 +271,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatProjectil: 20
-  Enemic1: {fileID: 2605797416172461777, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
-  Enemic2: {fileID: 2605797416172461777, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
+  velocitatBala: 10
