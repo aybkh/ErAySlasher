@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
     }
     public void ReiniciarJoc()
     {
-        SceneManager.LoadScene("jocNauEspacials");
+        SceneManager.LoadScene("EraySlasher");
     }
 
 }
