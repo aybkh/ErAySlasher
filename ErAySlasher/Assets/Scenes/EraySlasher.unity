@@ -1467,7 +1467,7 @@ GameObject:
   - component: {fileID: 454532254}
   - component: {fileID: 454532253}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Generador Enemic 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 706273212}
   - component: {fileID: 706273211}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Generador Enemic 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3548,6 +3548,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bala: {fileID: 4310630187998879859, guid: 790a3cc0d02896c4d8b113495ea8716c, type: 3}
+--- !u!1 &1232197906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232197907}
+  - component: {fileID: 1232197908}
+  m_Layer: 0
+  m_Name: Generador Enemic 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232197907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232197906}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.81, y: 4.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1707345203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232197908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232197906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23663a26c2968be4ebc4a187adf2dfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemic2: {fileID: 5755496105012855962, guid: 73dff36c378e971468cb60ec785ecbff, type: 3}
 --- !u!1 &1232869364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,6 +4438,51 @@ MonoBehaviour:
   puntuacioRecord: {fileID: 0}
   PantallaFinal: {fileID: 0}
   MenuPause: {fileID: 0}
+--- !u!1 &1399436622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1399436623}
+  - component: {fileID: 1399436624}
+  m_Layer: 0
+  m_Name: Generador Enemic 2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1399436623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399436622}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.78, y: 3.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1707345203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399436624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399436622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23663a26c2968be4ebc4a187adf2dfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemic2: {fileID: 5755496105012855962, guid: 73dff36c378e971468cb60ec785ecbff, type: 3}
 --- !u!1 &1515902741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,6 +5023,8 @@ Transform:
   - {fileID: 454532254}
   - {fileID: 706273212}
   - {fileID: 1805290202}
+  - {fileID: 1232197907}
+  - {fileID: 1399436623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708334282
@@ -5200,7 +5292,7 @@ GameObject:
   - component: {fileID: 1805290202}
   - component: {fileID: 1805290203}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Generador Enemic 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
