@@ -271,4 +271,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dde3025ce5967741b490f7e1d09890c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatBala: 10
+  velocitatBala: 20
