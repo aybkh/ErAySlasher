@@ -68,4 +68,8 @@ public class movimentPlayer : MonoBehaviour
     {
         get { return videsA; }
     }
+    public float Vides()
+    {
+        return videsA;
+    }
 }
