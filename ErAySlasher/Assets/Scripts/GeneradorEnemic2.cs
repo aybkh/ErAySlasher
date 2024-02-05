@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DispararBalas : MonoBehaviour
+public class GeneradorEnemic2 : MonoBehaviour
 {
-    public GameObject Bala;
+    public GameObject Enemic2;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CreaBala", 0f, 1f);
+        InvokeRepeating("CreaEnemic", 0f, 10f);
     }
 
     // Update is called once per frame
@@ -17,10 +17,10 @@ public class DispararBalas : MonoBehaviour
 
     }
 
-    private void CreaBala()
+    private void CreaEnemic()
     {
 
-        Destroy(Instantiate(Bala, this.transform.position, this.transform.rotation), 2.0f);
+        Instantiate(Enemic2, this.transform.position, this.transform.rotation);
 
 
     }
