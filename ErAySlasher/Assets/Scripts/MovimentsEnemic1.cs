@@ -7,16 +7,17 @@ public class MovimentsEnemic1 : MonoBehaviour
     public float velocitatEnemic = 1f;
     public GameObject player;
     private Rigidbody2D rb;
-    string ttag = "Player";
-    public int videsEnemic = 3;
+    string tag = "Player";
+    
+    private int punts = 1;
 
-    public GameObject prefabRecogibleSalud;
-    public float probabilidadDeCaída = 0.3f;
+    public GameObject prefabRecollictable;
+    //public float probabilidadDeCaída = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag(ttag);
+        player = GameObject.FindGameObjectWithTag(tag);
     }
 
     // Update is called once per frame
@@ -30,30 +31,43 @@ public class MovimentsEnemic1 : MonoBehaviour
             rb.velocity = direccio * velocitatEnemic;
         }
     }
-    
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "bala")
+        {
+            GameManager controlador = FindObjectOfType<GameManager>();
+            controlador.sumaScore(punts);
+
+            Destroy(this.gameObject, 0.1f);
+            Destroy(collision.gameObject);
+        }
+    }
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
        
         if(collision.gameObject.tag == "bala")
         {
-            videsEnemic--;
+            GameManager controlador = FindObjectOfType<GameManager>();
+            controlador.sumaScore(punts);
+
+            //this.gameObject.SetActive(false);
+            Destroy(this.gameObject, 0.1f);
+            Destroy(collision.gameObject);
+            GameManager EnmMatats = FindObjectOfType<GameManager>();
             
-            if(videsEnemic <=0)
+            if (EnmMatats.DonarPunts() >= 10)
             {
-                if (Random.value <= probabilidadDeCaída)
-                {
-                    DejarRecogibleSalud();
-                    Destroy(this.gameObject, 0.1f);
-                    Destroy(collision.gameObject);
-                }
-                
+                DeixarRecollictable();
+                Destroy(this.gameObject, 0.1f);
+                Destroy(collision.gameObject);
             }
         }
     }
-
-    void DejarRecogibleSalud()
+    */
+    void DeixarRecollictable()
     {
         // Instanciar el prefab del recogible de salud en la posición del enemigo
-        Destroy(Instantiate(prefabRecogibleSalud, transform.position, Quaternion.identity), 10.0f);
+        Destroy(Instantiate(prefabRecollictable, transform.position, Quaternion.identity), 10.0f);
     }
 }

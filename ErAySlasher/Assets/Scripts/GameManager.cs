@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public movimentPlayer Player;
     public TextMeshProUGUI marcadorVides;
 
-    public MovimentsEnemic1 enemic;
+    public MovimentsEnemic1 Enemic1;
     public TextMeshProUGUI marcadorScore;
 
     public TextMeshProUGUI puntuacioActual;
@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        marcadorVides.text = "X " + Player.misVides;
+        marcadorVides.text = "X " + Player.Vides();
         marcadorScore.text = "X " + DonarPunts();
 
-        if ((Player.misVides == 0) && (PantallaFinal.activeSelf == false))
+        if ((Player.Vides() == 0) && (PantallaFinal.activeSelf == false))
         {
 
             PantallaFinal.SetActive(true);
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     }
     public void TornarJugar()
     {
-        SceneManager.LoadScene("jocNauEspacials");
+        SceneManager.LoadScene("EraySlasher");
     }
     public void Sortir()
     {
