@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimentsBala : MonoBehaviour
 {
-    public float velocitatBala = 10.0f;
+    public float velocitatBala = 20.0f;
     // Start is called before the first frame update
     void Start()
     {

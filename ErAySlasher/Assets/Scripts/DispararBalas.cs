@@ -20,7 +20,7 @@ public class DispararBalas : MonoBehaviour
     private void CreaBala()
     {
 
-        Destroy(Instantiate(Bala, this.transform.position, this.transform.rotation), 4.0f);
+        Destroy(Instantiate(Bala, this.transform.position, this.transform.rotation), 2.0f);
 
 
     }
