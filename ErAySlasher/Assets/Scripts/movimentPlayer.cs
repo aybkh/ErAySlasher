@@ -61,6 +61,15 @@ public class movimentPlayer : MonoBehaviour
             }
             OnHealthChanged.Invoke();
         }
+        if (collision.gameObject.tag == "Destral")
+        {
+            videsA = vides--;
+            if (vides <= 0)
+            {
+                Destroy(this.gameObject);
+                Destroy(collision.gameObject);
+            }
+        }
         
     }
 
