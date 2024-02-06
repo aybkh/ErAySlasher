@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         marcadorScore.text = " " + DonarPunts();
         marcadorScore2.text = " " + ScoreEnemic2();
 
-        if ((Player.Vides() <= 0) && (PantallaFinal.activeSelf == false))
+        if ((Player.Vides() <= 1) && (PantallaFinal.activeSelf == false))
         {
 
             PantallaFinal.SetActive(true);
