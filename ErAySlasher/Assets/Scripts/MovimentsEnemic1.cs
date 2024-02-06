@@ -48,11 +48,12 @@ public class MovimentsEnemic1 : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager EnmMatats = FindObjectOfType<GameManager>();
             
-            if (EnmMatats.DonarPunts() >= 10)
+            if (EnmMatats.DonarPunts() % 10 == 0)
             {
                 DeixarRecollictable();
                 Destroy(this.gameObject, 0.1f);
                 Destroy(collision.gameObject);
+                
             }
         }
         if (collision.gameObject.tag == "Player")
