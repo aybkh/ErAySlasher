@@ -23,11 +23,13 @@ public class GameManager : MonoBehaviour
 
 
     private int puntuacio;
+    private int puntuacioE2;
 
     // Start is called before the first frame update
     void Start()
     {
         puntuacio = 0;
+        puntuacioE2 = 0;
     }
 
     // Update is called once per frame
@@ -63,13 +65,20 @@ public class GameManager : MonoBehaviour
     public void sumaScore(int punts)
     {
         puntuacio = puntuacio + punts;
-        Debug.Log("Puntuación actualizada: " + puntuacio);
 
     }
     public int DonarPunts()
     {
         return puntuacio;
-        Debug.Log("Puntuación consultada: " + puntuacio);
+    }
+    public void sumaScoreEnemic2(int puntsEnemic2)
+    {
+        puntuacioE2 = puntuacioE2 + puntsEnemic2;
+
+    }
+    public int ScoreEnemic2()
+    {
+        return puntuacioE2;
     }
     public void TornarJugar()
     {

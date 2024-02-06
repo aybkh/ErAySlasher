@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 665194537607573505}
   - component: {fileID: 8835066759098801473}
   - component: {fileID: 7957482349277396221}
+  - component: {fileID: -1979759907263612594}
   m_Layer: 0
   m_Name: Enemic2
   m_TagString: Enemic2
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9b4a50b3ae56def4dac57da9e097a167, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.61698115, g: 1, b: 0.5686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -311,3 +312,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1979759907263612594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755496105012855962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbe0ff25e468f945bf654ea2669732a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocitatEnemic: 0.3
+  player: {fileID: 2570556122888580922, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
+  prefabRecollictableEnemic2: {fileID: 2721619481800332968, guid: 854048ab5ba4ed1469c5976db3f41a20, type: 3}

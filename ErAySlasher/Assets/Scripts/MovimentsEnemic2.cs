@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimentsEnemic1 : MonoBehaviour
+public class MovimentsEnemic2 : MonoBehaviour
 {
-    public float velocitatEnemic = 1f;
+    public float velocitatEnemic = 0.3f;
     public GameObject player;
     private Rigidbody2D rb;
     string tag = "Player";
-    
-    private int punts = 1;
 
-    public GameObject prefabRecollictable;
+    private int puntsEnemic2 = 1;
+
+    public GameObject prefabRecollictableEnemic2;
     //public float probabilidadDeCaída = 0.3f;
     // Start is called before the first frame update
     void Start()
@@ -31,24 +31,24 @@ public class MovimentsEnemic1 : MonoBehaviour
             rb.velocity = direccio * velocitatEnemic;
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if(collision.gameObject.tag == "bala")
+
+        if (collision.gameObject.tag == "bala")
         {
             GameManager controlador = FindObjectOfType<GameManager>();
-            controlador.sumaScore(punts);
+            controlador.sumaScoreEnemic2(puntsEnemic2);
 
             this.gameObject.SetActive(false);
 
             Destroy(this.gameObject, 0.1f);
             Destroy(collision.gameObject);
             GameManager EnmMatats = FindObjectOfType<GameManager>();
-            
-            if (EnmMatats.DonarPunts() % 10 == 0)
+
+            if (EnmMatats.ScoreEnemic2() % 20 == 0)
             {
-                DeixarRecollictable();
+                DeixarRecollictable2();
                 Destroy(this.gameObject, 0.1f);
                 Destroy(collision.gameObject);
             }
@@ -58,10 +58,10 @@ public class MovimentsEnemic1 : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
         }
     }
-    
-    void DeixarRecollictable()
+
+    void DeixarRecollictable2()
     {
         // Instanciar el prefab del recogible de salud en la posición del enemigo
-        Destroy(Instantiate(prefabRecollictable, transform.position, Quaternion.identity), 10.0f);
+        Destroy(Instantiate(prefabRecollictableEnemic2, transform.position, Quaternion.identity), 10.0f);
     }
 }
