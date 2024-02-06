@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbe0ff25e468f945bf654ea2669732a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatEnemic: 0.3
+  velocitatEnemic: 0.6
   player: {fileID: 2570556122888580922, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
   prefabRecollictableEnemic2: {fileID: 2721619481800332968, guid: 854048ab5ba4ed1469c5976db3f41a20, type: 3}
 --- !u!60 &7258695143580852513
