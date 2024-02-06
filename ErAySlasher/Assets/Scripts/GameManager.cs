@@ -59,13 +59,12 @@ public class GameManager : MonoBehaviour
         {
             ResumirJoc();
         }
-
-
     }
     public void sumaScore(int punts)
     {
         puntuacio = puntuacio + punts;
 
+        Debug.Log("Puntuación actualitzada: " + puntuacio);
     }
     public int DonarPunts()
     {
