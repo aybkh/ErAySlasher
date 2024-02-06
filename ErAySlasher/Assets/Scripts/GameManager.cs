@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     private int puntuacio;
 
-    private int enemicsMatats = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,21 +96,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("EraySlasher");
     }
-    public void EnemigoDestruido()
-    {
-        enemicsMatats++;
-        VerificarGeneracioEnemic2();
-    }
-    private void VerificarGeneracioEnemic2()
-    {
-        if (enemicsMatats >= 50)
-        {
-            // Llama a un método en el script GeneradorEnemic2 para que genere Enemic2
-            GeneradorEnemic2 generadorEnemic2 = FindObjectOfType<GeneradorEnemic2>();
-            if (generadorEnemic2 != null)
-            {
-                generadorEnemic2.GenerarEnemic2();
-            }
-        }
-    }
+    
 }

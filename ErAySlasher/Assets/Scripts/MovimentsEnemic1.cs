@@ -42,7 +42,7 @@ public class MovimentsEnemic1 : MonoBehaviour
 
             this.gameObject.SetActive(false);
 
-            controlador.EnemigoDestruido();
+            
             
             Destroy(this.gameObject, 0.1f);
             Destroy(collision.gameObject);

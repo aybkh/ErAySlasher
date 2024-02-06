@@ -8,7 +8,7 @@ public class GeneradorEnemic2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CreaEnemic", 0f, 10f);
+        InvokeRepeating("GenerarEnemic2", 30f, 10f);
     }
 
     // Update is called once per frame
@@ -16,13 +16,9 @@ public class GeneradorEnemic2 : MonoBehaviour
     {
         
     }
-
-    private void CreaEnemic()
+    private void GenerarEnemic2()
     {
-        GenerarEnemic2();
+        Destroy(Instantiate(Enemic2, transform.position, transform.rotation), 10f);
     }
-    public void GenerarEnemic2()
-    {
-        Destroy(Instantiate(Enemic2, this.transform.position, this.transform.rotation), 10f);
-    }
+    
 }
