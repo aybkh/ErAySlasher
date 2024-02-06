@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI puntuacioActual;
     public TextMeshProUGUI puntuacioRecord;
-    public GameObject PantallaFinal;
+    public GameObject gameOver;
 
 
     public GameObject MenuPause;
@@ -43,10 +43,10 @@ public class GameManager : MonoBehaviour
         marcadorScore.text = " " + DonarPunts();
         marcadorScore2.text = " " + ScoreEnemic2();
 
-        if ((Player.Vides() <= 0) && (PantallaFinal.activeSelf == false))
+        if ((Player.Vides() <= 0) && (gameOver.activeSelf == false))
         {
 
-            PantallaFinal.SetActive(true);
+            gameOver.SetActive(true);
             puntuacioActual.text = puntuacio.ToString();
             if (PlayerPrefs.GetInt("Record") < puntuacio)
             {
