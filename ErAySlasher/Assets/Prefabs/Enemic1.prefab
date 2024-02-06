@@ -277,6 +277,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocitatEnemic: 1
   player: {fileID: 2570556122888580922, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
-  videsEnemic: 2
-  prefabRecogibleSalud: {fileID: 550344582983917638, guid: 394eafe2c7f6af848abcdadd44053f1c, type: 3}
-  "probabilidadDeCa\xEDda": 0.3
+  prefabRecollictable: {fileID: 550344582983917638, guid: 394eafe2c7f6af848abcdadd44053f1c, type: 3}

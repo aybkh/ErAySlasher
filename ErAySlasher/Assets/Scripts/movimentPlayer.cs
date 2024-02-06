@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class movimentPlayer : MonoBehaviour
 {
-    public float vides { get; set; } = 100;
+    public float vides { get; set; } = 10;
     public float videsA;
     public float velocitatMoviment = 8f;
     public float velocitatRotacio;
@@ -42,8 +42,8 @@ public class movimentPlayer : MonoBehaviour
     }
     public void RestaurarSalud(int cantitat)
     {
-        vides++;
-        vides = Mathf.Min(vides, 100);
+        videsA++;
+        vides = Mathf.Min(vides, 10);
     }
 
    

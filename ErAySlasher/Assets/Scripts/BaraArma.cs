@@ -9,6 +9,6 @@ public class BaraArma : MonoBehaviour
 
     public void UpdateHealthBar(movimentPlayer bara)
     {
-        Bar.fillAmount = bara.misVides / 100f;
+        Bar.fillAmount = bara.misVides / 10f;
     }
 }

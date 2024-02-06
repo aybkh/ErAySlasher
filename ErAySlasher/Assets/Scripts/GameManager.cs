@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private int puntuacio;
 
-
+    private int enemicsMatats = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        marcadorVides.text = "X " + Player.Vides();
-        marcadorScore.text = "X " + DonarPunts();
+        marcadorVides.text = " " + Player.Vides();
+        marcadorScore.text = " " + DonarPunts();
 
         if ((Player.Vides() == 0) && (PantallaFinal.activeSelf == false))
         {
@@ -64,11 +64,13 @@ public class GameManager : MonoBehaviour
     public void sumaScore(int punts)
     {
         puntuacio = puntuacio + punts;
+        Debug.Log("Puntuación actualizada: " + puntuacio);
 
     }
     public int DonarPunts()
     {
         return puntuacio;
+        Debug.Log("Puntuación consultada: " + puntuacio);
     }
     public void TornarJugar()
     {
@@ -95,5 +97,21 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("EraySlasher");
     }
-
+    public void EnemigoDestruido()
+    {
+        enemicsMatats++;
+        VerificarGeneracioEnemic2();
+    }
+    private void VerificarGeneracioEnemic2()
+    {
+        if (enemicsMatats >= 50)
+        {
+            // Llama a un método en el script GeneradorEnemic2 para que genere Enemic2
+            GeneradorEnemic2 generadorEnemic2 = FindObjectOfType<GeneradorEnemic2>();
+            if (generadorEnemic2 != null)
+            {
+                generadorEnemic2.GenerarEnemic2();
+            }
+        }
+    }
 }

@@ -14,14 +14,15 @@ public class GeneradorEnemic2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void CreaEnemic()
     {
-
-        Instantiate(Enemic2, this.transform.position, this.transform.rotation);
-
-
+        GenerarEnemic2();
+    }
+    public void GenerarEnemic2()
+    {
+        Destroy(Instantiate(Enemic2, this.transform.position, this.transform.rotation), 10f);
     }
 }

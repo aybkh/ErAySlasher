@@ -31,19 +31,8 @@ public class MovimentsEnemic1 : MonoBehaviour
             rb.velocity = direccio * velocitatEnemic;
         }
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.tag == "bala")
-        {
-            GameManager controlador = FindObjectOfType<GameManager>();
-            controlador.sumaScore(punts);
-
-            Destroy(this.gameObject, 0.1f);
-            Destroy(collision.gameObject);
-        }
-    }
-    /*private void OnTriggerEnter2D(Collider2D collision)
     {
        
         if(collision.gameObject.tag == "bala")
@@ -51,7 +40,10 @@ public class MovimentsEnemic1 : MonoBehaviour
             GameManager controlador = FindObjectOfType<GameManager>();
             controlador.sumaScore(punts);
 
-            //this.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
+
+            controlador.EnemigoDestruido();
+            
             Destroy(this.gameObject, 0.1f);
             Destroy(collision.gameObject);
             GameManager EnmMatats = FindObjectOfType<GameManager>();
@@ -63,8 +55,12 @@ public class MovimentsEnemic1 : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
     }
-    */
+    
     void DeixarRecollictable()
     {
         // Instanciar el prefab del recogible de salud en la posición del enemigo

@@ -18,12 +18,12 @@ public class Recollectables : MonoBehaviour
     }
     
 
-    void OnTriggerEnter2D(Collider2D collisio)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collisio.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             // Aplicar la salud al jugador (o realizar otras acciones)
-            movimentPlayer saludJugador = collisio.GetComponent<movimentPlayer>();
+            movimentPlayer saludJugador = collision.GetComponent<movimentPlayer>();
             if (saludJugador != null)
             {
                 saludJugador.RestaurarSalud(cantidadDeSalud);
