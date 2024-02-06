@@ -12,7 +12,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI marcadorVides;
 
     public MovimentsEnemic1 Enemic1;
+    public MovimentsEnemic2 Enemic2;
+
     public TextMeshProUGUI marcadorScore;
+    public TextMeshProUGUI marcadorScore2;
+
 
     public TextMeshProUGUI puntuacioActual;
     public TextMeshProUGUI puntuacioRecord;
@@ -37,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         marcadorVides.text = " " + Player.Vides();
         marcadorScore.text = " " + DonarPunts();
+        marcadorScore2.text = " " + ScoreEnemic2();
 
         if ((Player.Vides() == 0) && (PantallaFinal.activeSelf == false))
         {

@@ -4612,10 +4612,12 @@ MonoBehaviour:
   Player: {fileID: 1690448728}
   marcadorVides: {fileID: 1598060634}
   Enemic1: {fileID: -822594294246465410, guid: 08f1233323333b84f81a52fd092cce54, type: 3}
+  Enemic2: {fileID: -1979759907263612594, guid: 73dff36c378e971468cb60ec785ecbff, type: 3}
   marcadorScore: {fileID: 537824729}
+  marcadorScore2: {fileID: 1598060634}
   puntuacioActual: {fileID: 1093055963}
   puntuacioRecord: {fileID: 1067212029}
-  PantallaFinal: {fileID: 0}
+  PantallaFinal: {fileID: 1767391332}
   MenuPause: {fileID: 0}
 --- !u!1 &1399436622
 GameObject:
