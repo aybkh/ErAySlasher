@@ -20,7 +20,7 @@ public class dispararDestralEnemic2 : MonoBehaviour
     private void CreaDestral()
     {
 
-        Destroy(Instantiate(Destral, this.transform.position, this.transform.rotation), 4.0f);
+        Destroy(Instantiate(Destral, this.transform.position, this.transform.rotation), 10.0f);
 
 
     }

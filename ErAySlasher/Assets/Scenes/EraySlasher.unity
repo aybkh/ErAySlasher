@@ -4617,7 +4617,7 @@ MonoBehaviour:
   marcadorScore2: {fileID: 1598060634}
   puntuacioActual: {fileID: 1093055963}
   puntuacioRecord: {fileID: 1067212029}
-  PantallaFinal: {fileID: 1767391332}
+  gameOver: {fileID: 0}
   MenuPause: {fileID: 0}
 --- !u!1 &1399436622
 GameObject:
@@ -5599,7 +5599,7 @@ GameObject:
   - component: {fileID: 1767391333}
   m_Layer: 5
   m_Name: gameOver
-  m_TagString: Untagged
+  m_TagString: gameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

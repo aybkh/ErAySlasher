@@ -10,6 +10,7 @@ TagManager:
   - Enemic
   - bala
   - Destral
+  - gameOver
   layers:
   - Default
   - TransparentFX
