@@ -7,10 +7,12 @@ using UnityEngine;
 
 public class movimentPlayer : MonoBehaviour
 {
-    public float vides { get; set; } = 9;
+    public float vides { get; set; } = 10;
     public float videsA;
     public float velocitatMoviment = 8f;
     public float velocitatRotacio;
+
+    public UnityEvent OnHealthChanged;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,39 +42,40 @@ public class movimentPlayer : MonoBehaviour
         // Mover al jugador en la dirección calculada
         transform.position += moviment * velocitatMoviment * Time.deltaTime;
     }
-    public void RestaurarSalud(int cantitat)
+    public void RestaurarVida(int cantitat)
     {
         videsA++;
-        vides = Mathf.Min(vides, 9);
+        vides = Mathf.Min(vides, 10);
+        ActualitzaBaraVida();
     }
 
-   
-    public UnityEvent OnHealthChanged;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.tag == "Enemic1")
         {
             videsA = vides--;
-            if (vides <= 0)
+            if (vides < 0)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
             }
-            OnHealthChanged.Invoke();
+            ActualitzaBaraVida();
         }
         if (collision.gameObject.tag == "Destral")
         {
             videsA = vides--;
-            if (vides <= 0)
+            if (vides < 0)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
             }
+            ActualitzaBaraVida();
         }
         
     }
-
+    
     public float misVides
     {
         get { return videsA; }
@@ -80,5 +83,10 @@ public class movimentPlayer : MonoBehaviour
     public float Vides()
     {
         return videsA;
+    }
+    
+    private void ActualitzaBaraVida()
+    {
+        OnHealthChanged.Invoke();
     }
 }

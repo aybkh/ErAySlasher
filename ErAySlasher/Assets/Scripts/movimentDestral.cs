@@ -40,7 +40,10 @@ public class movimentDestral : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject, 0.1f);
-            
+        }
+        if (collision.gameObject.tag == "foc")
+        {
+            Destroy(this.gameObject, 0.1f);
         }
     }
 }

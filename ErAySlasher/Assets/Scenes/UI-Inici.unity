@@ -508,8 +508,8 @@ Transform:
   m_GameObject: {fileID: 598331294}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.009, y: -0.0049, z: 94}
-  m_LocalScale: {x: 1.7412314, y: 0.97704244, z: 1}
+  m_LocalPosition: {x: -0.03, y: 0.96, z: 94}
+  m_LocalScale: {x: 2.1721861, y: 1.2188604, z: 1.2475}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -545,11 +545,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   marcadorVides: {fileID: 0}
-  enemic: {fileID: 0}
+  Enemic1: {fileID: 0}
+  Enemic2: {fileID: 0}
   marcadorScore: {fileID: 0}
+  marcadorScore2: {fileID: 0}
   puntuacioActual: {fileID: 0}
   puntuacioRecord: {fileID: 0}
-  PantallaFinal: {fileID: 0}
+  gameOver: {fileID: 0}
   MenuPause: {fileID: 0}
 --- !u!4 &976569353
 Transform:
@@ -828,7 +830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272, y: -189}
+  m_AnchoredPosition: {x: 186, y: -137}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1604150671
@@ -1229,7 +1231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: -190}
+  m_AnchoredPosition: {x: -205, y: -137}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978544698

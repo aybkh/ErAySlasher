@@ -9,7 +9,6 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     public movimentPlayer Player;
-    public TextMeshProUGUI marcadorVides;
 
     public MovimentsEnemic1 Enemic1;
     public MovimentsEnemic2 Enemic2;
@@ -39,7 +38,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        marcadorVides.text = " " + Player.Vides();
         marcadorScore.text = " " + DonarPunts();
         marcadorScore2.text = " " + ScoreEnemic2();
 
@@ -64,11 +62,9 @@ public class GameManager : MonoBehaviour
             ResumirJoc();
         }
     }
-    public void sumaScore(int punts)
+    public void sumaScoreEnemic1(int punts)
     {
         puntuacio = puntuacio + punts;
-
-        Debug.Log("Puntuación actualitzada: " + puntuacio);
     }
     public int DonarPunts()
     {

@@ -5,10 +5,10 @@ using UnityEngine;
 public class BaraArma : MonoBehaviour
 {
     [SerializeField]
-    private UnityEngine.UI.Image Bar;
+    private UnityEngine.UI.Image Bara;
 
     public void UpdateHealthBar(movimentPlayer bara)
     {
-        Bar.fillAmount = bara.misVides / 10f;
+        Bara.fillAmount = bara.misVides / 10f;
     }
 }

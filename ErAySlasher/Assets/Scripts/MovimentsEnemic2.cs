@@ -57,6 +57,10 @@ public class MovimentsEnemic2 : MonoBehaviour
         {
             Destroy(this.gameObject, 0.1f);
         }
+        if (collision.gameObject.tag == "foc")
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
     }
 
     void DeixarRecollictable2()

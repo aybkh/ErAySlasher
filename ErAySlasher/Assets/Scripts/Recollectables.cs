@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Recollectables : MonoBehaviour
-{   public int cantidadDeSalud = 2;
+{   public int QuantsVides = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +22,11 @@ public class Recollectables : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Aplicar la salud al jugador (o realizar otras acciones)
+            // sumar una vida al jugador)
             movimentPlayer saludJugador = collision.GetComponent<movimentPlayer>();
             if (saludJugador != null)
             {
-                saludJugador.RestaurarSalud(cantidadDeSalud);
+                saludJugador.RestaurarVida(QuantsVides);
             }
             Destroy(gameObject);
         }
