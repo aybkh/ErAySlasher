@@ -56,7 +56,7 @@ public class movimentPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Enemic1")
         {
             videsA = vides--;
-            if (vides < 0)
+            if (vides <= -1)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
@@ -66,7 +66,7 @@ public class movimentPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Destral")
         {
             videsA = vides--;
-            if (vides < 0)
+            if (vides <= -1)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
