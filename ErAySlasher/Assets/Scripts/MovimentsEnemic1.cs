@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimentsEnemic1 : MonoBehaviour
 {
+    private int videsEnemic = 3;
+    private int videsM;
     public float velocitatEnemic = 1f;
     public GameObject player;
     private Rigidbody2D rb;
@@ -12,12 +15,16 @@ public class MovimentsEnemic1 : MonoBehaviour
     private int punts = 1;
 
     public GameObject prefabRecollictable;
-    //public float probabilidadDeCaída = 0.3f;
+
+    [SerializeField]
+    private Slider slider;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag(tag);
+        videsM = videsEnemic;
     }
 
     // Update is called once per frame
@@ -27,9 +34,12 @@ public class MovimentsEnemic1 : MonoBehaviour
         {
             Vector3 direccio = (player.transform.position - rb.transform.position);
             direccio.Normalize();
-            //this.gameObject.transform.rotation = Quaternion.LookRotation(direccio);
             rb.velocity = direccio * velocitatEnemic;
         }
+        //if (slider != null)
+        //{
+        //    slider.value = videsEnemic / videsM;
+        //}
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,13 +47,21 @@ public class MovimentsEnemic1 : MonoBehaviour
        
         if(collision.gameObject.tag == "bala")
         {
+            videsEnemic --;
+
+            slider.value = videsEnemic / videsM;
+
             GameManager controlador = FindObjectOfType<GameManager>();
             controlador.sumaScoreEnemic1(punts);
 
             this.gameObject.SetActive(false);
+            //Destroy(collision.gameObject);
+            if (videsEnemic <= 0)
+            {
+                Destroy(this.gameObject, 0.1f);
+                Destroy(collision.gameObject);
+            }
 
-            Destroy(this.gameObject, 0.1f);
-            Destroy(collision.gameObject);
             GameManager EnmMatats = FindObjectOfType<GameManager>();
             
             if (EnmMatats.DonarPunts() % 10 == 0)
@@ -68,4 +86,5 @@ public class MovimentsEnemic1 : MonoBehaviour
         // Instanciar el prefab del recogible de salud en la posición del enemigo
         Destroy(Instantiate(prefabRecollictable, transform.position, Quaternion.identity), 10.0f);
     }
+    
 }
