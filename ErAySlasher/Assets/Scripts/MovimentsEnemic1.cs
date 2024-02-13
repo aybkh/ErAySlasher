@@ -53,7 +53,28 @@ public class MovimentsEnemic1 : MonoBehaviour
                 DeixarRecollictable();
             }
         }
-        
+        if (collision.gameObject.tag == "bala2")
+        {
+            videsEnemic = videsEnemic - 2;
+            if (slider != null)
+            {
+                slider.value = videsEnemic;
+            }
+            GameManager controlador = FindObjectOfType<GameManager>();
+            controlador.sumaScoreEnemic1(punts);
+
+            if (videsEnemic <= 0)
+            {
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+            GameManager enmMatats = FindObjectOfType<GameManager>();
+            if (enmMatats.DonarPunts() % 10 == 0)
+            {
+                DeixarRecollictable();
+            }
+        }
+
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject, 0.1f);
