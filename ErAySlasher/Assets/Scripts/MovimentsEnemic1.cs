@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MovimentsEnemic1 : MonoBehaviour
 {
-    private int videsEnemic = 3;
+    private int videsEnemic = 10;
     private int videsM;
     public float velocitatEnemic = 1f;
     public GameObject player;
@@ -26,44 +26,25 @@ public class MovimentsEnemic1 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag(tag);
         videsM = videsEnemic;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (player != null)
-        {
-            Vector3 direccio = (player.transform.position - rb.transform.position);
-            direccio.Normalize();
-            rb.velocity = direccio * velocitatEnemic;
-        }
-        //if (slider != null)
-        //{
-        //    slider.value = videsEnemic / videsM;
-        //}
-    }
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if(collision.gameObject.tag == "bala")
+
+        if (collision.gameObject.tag == "bala")
         {
-            videsEnemic --;
-
-            slider.value = videsEnemic / videsM;
-
+            videsEnemic--;
             GameManager controlador = FindObjectOfType<GameManager>();
             controlador.sumaScoreEnemic1(punts);
 
             this.gameObject.SetActive(false);
-            //Destroy(collision.gameObject);
-            if (videsEnemic <= 0)
+            ////Destroy(collision.gameObject);
+            if (videsEnemic == -1)
             {
                 Destroy(this.gameObject, 0.1f);
                 Destroy(collision.gameObject);
             }
 
             GameManager EnmMatats = FindObjectOfType<GameManager>();
-            
+
             if (EnmMatats.DonarPunts() % 10 == 0)
             {
                 DeixarRecollictable();
@@ -80,6 +61,23 @@ public class MovimentsEnemic1 : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
         }
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (player != null)
+        {
+            Vector3 direccio = (player.transform.position - rb.transform.position);
+            direccio.Normalize();
+            rb.velocity = direccio * velocitatEnemic;
+        }
+        if (slider != null)
+        {
+            slider.value = videsEnemic;
+        }
+    }
+    
+    
     
     void DeixarRecollictable()
     {

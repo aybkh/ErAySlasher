@@ -8,7 +8,7 @@ public class DispararBalas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CreaBala", 0f, 0.5f);
+        InvokeRepeating("CreaBala", 0f, 2f);
     }
 
     // Update is called once per frame
