@@ -11,6 +11,7 @@ public class movimentPlayer : MonoBehaviour
     public float videsA;
     public float velocitatMoviment = 8f;
     public float velocitatRotacio;
+    public GameObject arma2;
 
     public UnityEvent OnHealthChanged;
     // Start is called before the first frame update
@@ -83,8 +84,18 @@ public class movimentPlayer : MonoBehaviour
             ActualitzaBaraVida();
         }
         
+        if (collision.gameObject.tag == "recollictable" && (arma2.activeSelf == false))
+        {
+            arma2.SetActive(true);
+            Invoke("DesactivarArma2", 5f);
+        }
     }
-    
+    public void DesactivarArma2()
+    {
+        arma2.SetActive(false);
+    }
+
+
     public float misVides
     {
         get { return videsA; }

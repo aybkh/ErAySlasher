@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 209789888192134632}
   m_Layer: 0
   m_Name: element2
-  m_TagString: Untagged
+  m_TagString: recollictable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,5 +373,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57b6816eb7a29247a795f3c88532eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuantsVides: 1
-  arma2: {fileID: 0}

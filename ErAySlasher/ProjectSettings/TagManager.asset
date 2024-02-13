@@ -13,6 +13,7 @@ TagManager:
   - gameOver
   - foc
   - Enemic3
+  - recollictable
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI puntuacioActual;
     public TextMeshProUGUI puntuacioRecord;
     public GameObject gameOver;
-    public GameObject arma2;
 
     public GameObject MenuPause;
 
@@ -51,16 +50,6 @@ public class GameManager : MonoBehaviour
             }
             puntuacioRecord.text = PlayerPrefs.GetInt("Record").ToString();
         }
-
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PausarJoc();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && (MenuPause.activeSelf == true))
-        {
-            ResumirJoc();
-        }
     }
     public void sumaScoreEnemic1(int punts)
     {
@@ -87,35 +76,9 @@ public class GameManager : MonoBehaviour
     {
         UnityEngine.Application.Quit();
     }
-    public void PausarJoc()
-    {
-        SceneManager.LoadScene("MenuPausa");
-        Time.timeScale = 0f;
-        MenuPause.SetActive(true);
-
-    }
-    public void ResumirJoc()
-    {
-        Time.timeScale = 1f;
-        MenuPause.SetActive(false);
-
-    }
     public void ReiniciarJoc()
     {
         SceneManager.LoadScene("EraySlasher");
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && (arma2.activeSelf == false))
-        {
-            arma2.SetActive(true);
-            //// sumar una vida al jugador)
-            //movimentPlayer saludJugador = collision.GetComponent<movimentPlayer>();
-            //if (saludJugador != null)
-            //{
-            //    saludJugador.RestaurarVida(QuantsVides);
-            //}
-            Destroy(gameObject);
-        }
-    }
+
 }
