@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MovimentsEnemic1 : MonoBehaviour
 {
-    private int videsEnemic = 10;
+    private int videsEnemic = 3;
     private int videsM;
     public float velocitatEnemic = 1f;
     public GameObject player;
@@ -32,34 +32,28 @@ public class MovimentsEnemic1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "bala")
         {
             videsEnemic--;
+            if (slider != null)
+            {
+                slider.value = videsEnemic;
+            }
             GameManager controlador = FindObjectOfType<GameManager>();
             controlador.sumaScoreEnemic1(punts);
 
-            this.gameObject.SetActive(false);
-            Destroy(collision.gameObject);
             if (videsEnemic <= 0)
             {
-                Destroy(this.gameObject, 0.1f);
+                Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
-
-            GameManager EnmMatats = FindObjectOfType<GameManager>();
-
-            if (EnmMatats.DonarPunts() % 10 == 0)
+            GameManager enmMatats = FindObjectOfType<GameManager>();
+            if (enmMatats.DonarPunts() % 10 == 0)
             {
                 DeixarRecollictable();
-                Destroy(this.gameObject, 0.1f);
-                Destroy(collision.gameObject);
-            }
-            if (slider != null)
-            {
-                slider.value = videsEnemic / slider.maxValue;
             }
         }
+        
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject, 0.1f);

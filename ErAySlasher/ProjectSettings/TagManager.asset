@@ -12,6 +12,7 @@ TagManager:
   - Destral
   - gameOver
   - foc
+  - Enemic3
   layers:
   - Default
   - TransparentFX
