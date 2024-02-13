@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7131730193532149716}
   m_Layer: 6
   m_Name: Bala2
-  m_TagString: bala
+  m_TagString: bala2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
