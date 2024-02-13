@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimentsEnemic2 : MonoBehaviour
 {
-    public float velocitatEnemic = 0.3f;
+    private int videsEnemic2 = 3;
+    public float velocitatEnemic2 = 0.3f;
     public GameObject player;
     private Rigidbody2D rb;
     string tag = "Player";
@@ -12,12 +14,19 @@ public class MovimentsEnemic2 : MonoBehaviour
     private int puntsEnemic2 = 1;
 
     public GameObject prefabRecollictableEnemic2;
-    //public float probabilidadDeCaída = 0.3f;
+
+    [SerializeField]
+    private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag(tag);
+        if (slider != null)
+        {
+            slider.maxValue = videsEnemic2;
+            slider.value = videsEnemic2;
+        }
     }
 
     // Update is called once per frame
@@ -28,7 +37,7 @@ public class MovimentsEnemic2 : MonoBehaviour
             Vector3 direccio = (player.transform.position - rb.transform.position);
             direccio.Normalize();
             //this.gameObject.transform.rotation = Quaternion.LookRotation(direccio);
-            rb.velocity = direccio * velocitatEnemic;
+            rb.velocity = direccio * velocitatEnemic2;
         }
     }
 
@@ -37,20 +46,27 @@ public class MovimentsEnemic2 : MonoBehaviour
 
         if (collision.gameObject.tag == "bala")
         {
+            velocitatEnemic2--;
+            if (slider != null)
+            {
+                slider.value = videsEnemic2;
+            }
             GameManager controlador = FindObjectOfType<GameManager>();
             controlador.sumaScoreEnemic2(puntsEnemic2);
 
             this.gameObject.SetActive(false);
 
-            Destroy(this.gameObject, 0.1f);
-            Destroy(collision.gameObject);
+            if (videsEnemic2 <= 0)
+            {
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
             GameManager EnmMatats = FindObjectOfType<GameManager>();
 
             if (EnmMatats.ScoreEnemic2() % 20 == 0)
             {
                 DeixarRecollictable2();
-                Destroy(this.gameObject, 0.1f);
-                Destroy(collision.gameObject);
+
             }
         }
         if (collision.gameObject.tag == "Player")

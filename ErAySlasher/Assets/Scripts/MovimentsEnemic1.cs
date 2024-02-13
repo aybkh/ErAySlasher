@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MovimentsEnemic1 : MonoBehaviour
 {
     private int videsEnemic = 3;
-    private int videsM;
     public float velocitatEnemic = 1f;
     public GameObject Player;
     private Rigidbody2D rb;

@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class movimentDestral : MonoBehaviour
 {
-    public Transform Player;
     public float velocitatDestral;
 
-    private void Update()
+    void Update()
     {
-        if (Player != null)
-        {
-            Vector3 direction = Player.position - transform.position;
-            direction.Normalize();
-            transform.Translate(direction * velocitatDestral * Time.deltaTime);
-            
-        }
+        transform.Translate(new Vector3(velocitatDestral * Time.deltaTime, 0, 0));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
