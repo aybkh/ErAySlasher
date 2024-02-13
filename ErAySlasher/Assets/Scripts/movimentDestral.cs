@@ -4,27 +4,17 @@ using UnityEngine;
 
 public class movimentDestral : MonoBehaviour
 {
-    public float velocitatDestral = 1f;
-    public GameObject player;
-    private Rigidbody2D rb;
-    string tag = "Player";
-    
-    
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag(tag);
-    }
+    public Transform Player;
+    public float velocitatDestral;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (player != null)
+        if (Player != null)
         {
-            Vector3 direccio = (player.transform.position - rb.transform.position);
-            direccio.Normalize();
-            //this.gameObject.transform.rotation = Quaternion.LookRotation(direccio);
-            rb.velocity = direccio * velocitatDestral;
+            Vector3 direction = Player.position - transform.position;
+            direction.Normalize();
+            transform.Translate(direction * velocitatDestral * Time.deltaTime);
+            
         }
     }
 

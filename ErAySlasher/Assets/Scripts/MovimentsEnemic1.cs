@@ -8,7 +8,7 @@ public class MovimentsEnemic1 : MonoBehaviour
     private int videsEnemic = 3;
     private int videsM;
     public float velocitatEnemic = 1f;
-    public GameObject player;
+    public GameObject Player;
     private Rigidbody2D rb;
     string tag = "Player";
     
@@ -23,7 +23,7 @@ public class MovimentsEnemic1 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag(tag);
+        Player = GameObject.FindGameObjectWithTag(tag);
         if (slider != null)
         {
             slider.maxValue = videsEnemic;
@@ -67,9 +67,9 @@ public class MovimentsEnemic1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
+        if (Player != null)
         {
-            Vector3 direccio = (player.transform.position - rb.transform.position);
+            Vector3 direccio = (Player.transform.position - rb.transform.position);
             direccio.Normalize();
             rb.velocity = direccio * velocitatEnemic;
         }

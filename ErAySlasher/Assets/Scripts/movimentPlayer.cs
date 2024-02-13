@@ -73,6 +73,15 @@ public class movimentPlayer : MonoBehaviour
             }
             ActualitzaBaraVida();
         }
+        if (collision.gameObject.tag == "Enemic3")
+        {
+            videsA = vides - 2;
+            if (vides <= -1)
+            {
+                Destroy(this.gameObject);
+            }
+            ActualitzaBaraVida();
+        }
         
     }
     

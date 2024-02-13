@@ -501,5 +501,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449995737c5e182499511da3d74f931a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatDestral: 3
-  player: {fileID: 2570556122888580922, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
+  Player: {fileID: 1811144495166357306, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
+  velocitatDestral: 7

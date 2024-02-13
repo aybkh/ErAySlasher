@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MovimentsEnemic3 : MonoBehaviour
 {
+    public GameObject Player;
+    string tag = "Player";
+    public int videsEnemic3 = 4;
+
     [SerializeField]
     float velocitat = 3;
     [SerializeField]
@@ -31,4 +35,16 @@ public class MovimentsEnemic3 : MonoBehaviour
     {
         miPosicio = new Vector2(Random.Range(-distaciaMax, distaciaMax), Random.Range(-distaciaMax, distaciaMax));
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            videsEnemic3--;
+            if (videsEnemic3 <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 }
+
