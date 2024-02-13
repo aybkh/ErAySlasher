@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaraArma : MonoBehaviour
+public class BaraVida : MonoBehaviour
 {
     [SerializeField]
     private UnityEngine.UI.Image Bara;

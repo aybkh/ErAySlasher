@@ -1595,6 +1595,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1707345203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -48.615}
+--- !u!1 &494919636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494919638}
+  - component: {fileID: 494919637}
+  m_Layer: 0
+  m_Name: Arma1
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &494919637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494919636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8408d9651ccc534ba9b3674afe27e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bala: {fileID: 4310630187998879859, guid: 6a8e7d995f1cff944a35096004d9687f, type: 3}
+--- !u!4 &494919638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494919636}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.68543136, w: 0.72813725}
+  m_LocalPosition: {x: 0.673, y: -0.587, z: 0}
+  m_LocalScale: {x: 1.0495, y: 1.0495, z: 1.0495}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1690448731}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -86.539}
 --- !u!1 &517651344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,51 +3905,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198373575}
   m_CullTransparentMesh: 1
---- !u!1 &1222782461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1222782462}
-  - component: {fileID: 1222782463}
-  m_Layer: 0
-  m_Name: Arma1
-  m_TagString: Untagged
-  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1222782462
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222782461}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.56676227, w: 0.8238814}
-  m_LocalPosition: {x: 0.527, y: -0.269, z: 0}
-  m_LocalScale: {x: 1.0495, y: 1.0495, z: 1.0495}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1690448731}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.05}
---- !u!114 &1222782463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222782461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8408d9651ccc534ba9b3674afe27e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bala: {fileID: 4310630187998879859, guid: 6a8e7d995f1cff944a35096004d9687f, type: 3}
 --- !u!1 &1232197906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4661,7 +4661,8 @@ MonoBehaviour:
   marcadorScore2: {fileID: 1598060634}
   puntuacioActual: {fileID: 1093055963}
   puntuacioRecord: {fileID: 1067212029}
-  gameOver: {fileID: 1767391332}
+  gameOver: {fileID: 0}
+  arma2: {fileID: 494919636}
   MenuPause: {fileID: 0}
 --- !u!1 &1399436622
 GameObject:
@@ -4724,7 +4725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1452830953
 Transform:
   m_ObjectHideFlags: 0
@@ -6036,7 +6037,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1811144495166357306, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1222782462}
+      addedObject: {fileID: 494919638}
     - targetCorrespondingSourceObject: {fileID: 1811144495166357306, guid: f90d02aff50e4684fbabb55fac19cb46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 732117616}

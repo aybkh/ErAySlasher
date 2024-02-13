@@ -3,7 +3,8 @@ guid: d57b6816eb7a29247a795f3c88532eaa
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - arma2: {fileID: 2635087338760278260, guid: 8dc1b7b19c21db24c8d2cd91eab4be8a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
