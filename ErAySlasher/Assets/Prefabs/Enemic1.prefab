@@ -278,7 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocitatEnemic: 1
   player: {fileID: 5062027600983921548, guid: e9f16d7642431df438e3f16792e6d57a, type: 3}
-  prefabRecollictable: {fileID: 2721619481800332968, guid: 854048ab5ba4ed1469c5976db3f41a20, type: 3}
+  prefabRecollictable: {fileID: 550344582983917638, guid: 394eafe2c7f6af848abcdadd44053f1c, type: 3}
   slider: {fileID: 2772242779177585897}
 --- !u!1 &2987805744358888371
 GameObject:

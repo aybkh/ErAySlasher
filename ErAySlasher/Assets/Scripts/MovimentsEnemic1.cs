@@ -24,7 +24,11 @@ public class MovimentsEnemic1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag(tag);
-        videsM = videsEnemic;
+        if (slider != null)
+        {
+            slider.maxValue = videsEnemic;
+            slider.value = videsEnemic;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,8 +40,8 @@ public class MovimentsEnemic1 : MonoBehaviour
             controlador.sumaScoreEnemic1(punts);
 
             this.gameObject.SetActive(false);
-            ////Destroy(collision.gameObject);
-            if (videsEnemic == -1)
+            Destroy(collision.gameObject);
+            if (videsEnemic <= 0)
             {
                 Destroy(this.gameObject, 0.1f);
                 Destroy(collision.gameObject);
@@ -50,6 +54,10 @@ public class MovimentsEnemic1 : MonoBehaviour
                 DeixarRecollictable();
                 Destroy(this.gameObject, 0.1f);
                 Destroy(collision.gameObject);
+            }
+            if (slider != null)
+            {
+                slider.value = videsEnemic / slider.maxValue;
             }
         }
         if (collision.gameObject.tag == "Player")
@@ -71,10 +79,7 @@ public class MovimentsEnemic1 : MonoBehaviour
             direccio.Normalize();
             rb.velocity = direccio * velocitatEnemic;
         }
-        if (slider != null)
-        {
-            slider.value = videsEnemic;
-        }
+        
     }
     
     
