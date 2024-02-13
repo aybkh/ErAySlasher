@@ -16,5 +16,6 @@ public class MovimentsBala : MonoBehaviour
     {
         transform.Translate(new Vector3(velocitatBala * Time.deltaTime, 0, 0));
     }
+
    
 }

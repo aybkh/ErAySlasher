@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI puntuacioActual;
     public TextMeshProUGUI puntuacioRecord;
     public GameObject gameOver;
-
+    public GameObject arma2;
 
     public GameObject MenuPause;
 
@@ -104,5 +104,18 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("EraySlasher");
     }
-    
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && (arma2.activeSelf == false))
+        {
+            arma2.SetActive(true);
+            //// sumar una vida al jugador)
+            //movimentPlayer saludJugador = collision.GetComponent<movimentPlayer>();
+            //if (saludJugador != null)
+            //{
+            //    saludJugador.RestaurarVida(QuantsVides);
+            //}
+            Destroy(gameObject);
+        }
+    }
 }
