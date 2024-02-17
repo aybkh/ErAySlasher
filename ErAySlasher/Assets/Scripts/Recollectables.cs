@@ -23,13 +23,6 @@ public class Recollectables : MonoBehaviour
     {
         if (collision.gameObject.tag=="Player")
         {
-            
-            //// sumar una vida al jugador)
-            //movimentPlayer saludJugador = collision.GetComponent<movimentPlayer>();
-            //if (saludJugador != null)
-            //{
-            //    saludJugador.RestaurarVida(QuantsVides);
-            //}
             Destroy(gameObject);
         }
     }

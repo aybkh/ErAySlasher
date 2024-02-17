@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         marcadorScore.text = " " + DonarPunts();
         marcadorScore2.text = " " + ScoreEnemic2();
 
-        if ((Player.Vides() <= 1) && (gameOver.activeSelf == false))
+        if ((Player.Vides() <= 0) && (gameOver.activeSelf == false))
         {
             gameOver.SetActive(true);
             puntuacioActual.text = puntuacio.ToString();

@@ -39,18 +39,19 @@ public class MovimentsEnemic1 : MonoBehaviour
                 slider.value = videsEnemic;
             }
             GameManager controlador = FindObjectOfType<GameManager>();
-            controlador.sumaScoreEnemic1(punts);
-
             if (videsEnemic <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
+                controlador.sumaScoreEnemic1(punts);
+                if (controlador.DonarPunts() % 10 == 0)
+                    {
+                        DeixarRecollictable();
+                    }
+                this.gameObject.SetActive(false);
             }
-            GameManager enmMatats = FindObjectOfType<GameManager>();
-            if (enmMatats.DonarPunts() % 10 == 0)
-            {
-                DeixarRecollictable();
-            }
+
+
         }
         if (collision.gameObject.tag == "bala2")
         {
@@ -59,13 +60,13 @@ public class MovimentsEnemic1 : MonoBehaviour
             {
                 slider.value = videsEnemic;
             }
-            GameManager controlador = FindObjectOfType<GameManager>();
-            controlador.sumaScoreEnemic1(punts);
 
+            GameManager controlador = FindObjectOfType<GameManager>();
             if (videsEnemic <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
+                controlador.sumaScoreEnemic1(punts);
             }
             GameManager enmMatats = FindObjectOfType<GameManager>();
             if (enmMatats.DonarPunts() % 10 == 0)
@@ -95,9 +96,7 @@ public class MovimentsEnemic1 : MonoBehaviour
         }
         
     }
-    
-    
-    
+
     void DeixarRecollictable()
     {
         // Instanciar el prefab del recogible de salud en la posición del enemigo

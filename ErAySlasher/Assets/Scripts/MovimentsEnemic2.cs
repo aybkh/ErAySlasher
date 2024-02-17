@@ -54,7 +54,7 @@ public class MovimentsEnemic2 : MonoBehaviour
             GameManager controlador = FindObjectOfType<GameManager>();
             controlador.sumaScoreEnemic2(puntsEnemic2);
 
-            this.gameObject.SetActive(false);
+
 
             if (videsEnemic2 <= 0)
             {

@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class movimentPlayer : MonoBehaviour
 {
-    public float vides { get; set; } = 10;
-    public float videsA;
+    public int vides = 10;
     public float velocitatMoviment = 8f;
     public float velocitatRotacio;
     public GameObject arma2;
 
-    public UnityEvent OnHealthChanged;
+    public baraDeVida baraVidaJugador;
+    private bool arma2Activa = false;
     // Start is called before the first frame update
     void Start()
     {
-        videsA = vides;
+        baraVidaJugador.ConfigurarVidaMaxima(vides);
     }
 
     // Update is called once per frame
@@ -38,75 +39,69 @@ public class movimentPlayer : MonoBehaviour
             float angul = Mathf.MoveTowardsAngle(transform.eulerAngles.z, angulObjetiu, velocitatRotacio * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0f, 0f, angul);
         }
-        
-
-        // Mover al jugador en la dirección calculada
+                // Mover al jugador en la dirección calculada
         transform.position += moviment * velocitatMoviment * Time.deltaTime;
     }
-    public void RestaurarVida(int cantitat)
-    {
-        videsA++;
-        vides = Mathf.Min(vides, 10);
-        ActualitzaBaraVida();
-    }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Enemic1")
         {
-            videsA = vides--;
-            if (vides <= -1)
+            Debug.Log("Queden" + vides);
+            vides--;
+            baraVidaJugador.ActualizarVida(vides);
+            if (vides <= 0)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
             }
-            ActualitzaBaraVida();
+        }
+        if (collision.gameObject.tag == "Enemic2")
+        {
+            vides--;
+            baraVidaJugador.ActualizarVida(vides);
+            if (vides <= 0)
+            {
+                Destroy(this.gameObject);
+                Destroy(collision.gameObject);
+            }
         }
         if (collision.gameObject.tag == "Destral")
         {
-            videsA = vides--;
-            if (vides <= -1)
+            vides--;
+            baraVidaJugador.ActualizarVida(vides);
+            if (vides <= 0)
             {
                 Destroy(this.gameObject);
                 Destroy(collision.gameObject);
             }
-            ActualitzaBaraVida();
         }
         if (collision.gameObject.tag == "Enemic3")
         {
-            videsA = vides - 2;
-            if (vides <= -1)
+            vides = vides - 2;
+            baraVidaJugador.ActualizarVida(vides);
+            if (vides <= 0)
             {
                 Destroy(this.gameObject);
             }
-            ActualitzaBaraVida();
         }
         
-        if (collision.gameObject.tag == "recollictable" && (arma2.activeSelf == false))
+        if (collision.gameObject.tag == "recollictable" && !arma2Activa)
         {
             arma2.SetActive(true);
-            Invoke("DesactivarArma2", 5f);
+            arma2Activa = true;
+            InvokeRepeating("DesactivarArma2", 5f, 5f);
         }
+
     }
     public void DesactivarArma2()
     {
         arma2.SetActive(false);
+        arma2Activa = false;
+        Debug.Log("Arma2 desactivada.");
     }
-
-
-    public float misVides
+    public int Vides()
     {
-        get { return videsA; }
-    }
-    public float Vides()
-    {
-        return videsA;
-    }
-    
-    private void ActualitzaBaraVida()
-    {
-        OnHealthChanged.Invoke();
+        return vides;
     }
 }
