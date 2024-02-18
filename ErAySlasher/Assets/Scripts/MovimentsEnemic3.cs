@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovimentsEnemic3 : MonoBehaviour
 {
-    public GameObject Player;
     string tag = "Player";
     public int videsEnemic3 = 4;
 

@@ -6,69 +6,66 @@ using UnityEngine.UI;
 public class MovimentsEnemic2 : MonoBehaviour
 {
     private int videsEnemic2 = 3;
-    public float velocitatEnemic2 = 0.3f;
-    public GameObject player;
+    public float velocitatEnemic = 0.5f;
+    public GameObject Player;
     private Rigidbody2D rb;
     string tag = "Player";
 
-    private int puntsEnemic2 = 1;
+    private int punts = 1;
 
-    public GameObject prefabRecollictableEnemic2;
+    public GameObject prefabRecollictable;
 
-    [SerializeField]
-    private Slider slider;
+    public baraVidaEnemic2 baraVidaEnemic;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag(tag);
-        if (slider != null)
-        {
-            slider.maxValue = videsEnemic2;
-            slider.value = videsEnemic2;
-        }
+        Player = GameObject.FindGameObjectWithTag(tag);
+        baraVidaEnemic.ConfigurarVidaMaxima(videsEnemic2);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (player != null)
-        {
-            Vector3 direccio = (player.transform.position - rb.transform.position);
-            direccio.Normalize();
-            //this.gameObject.transform.rotation = Quaternion.LookRotation(direccio);
-            rb.velocity = direccio * velocitatEnemic2;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "bala")
         {
-            velocitatEnemic2--;
-            if (slider != null)
-            {
-                slider.value = videsEnemic2;
-            }
+            videsEnemic2--;
+            baraVidaEnemic.ActualizarVida(videsEnemic2);
+
             GameManager controlador = FindObjectOfType<GameManager>();
-            controlador.sumaScoreEnemic2(puntsEnemic2);
-
-
-
             if (videsEnemic2 <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
+                controlador.sumaScoreEnemic2(punts);
+                if (controlador.ScoreEnemic2() % 20 == 0)
+                {
+                    DeixarRecollictable();
+                }
+                this.gameObject.SetActive(false);
             }
-            GameManager EnmMatats = FindObjectOfType<GameManager>();
 
-            if (EnmMatats.ScoreEnemic2() % 20 == 0)
+
+        }
+        if (collision.gameObject.tag == "bala2")
+        {
+            videsEnemic2 = videsEnemic2 - 2;
+            baraVidaEnemic.ActualizarVida(videsEnemic2);
+
+
+            GameManager controlador = FindObjectOfType<GameManager>();
+            if (videsEnemic2 <= 0)
             {
-                DeixarRecollictable2();
-
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+                controlador.sumaScoreEnemic2(punts);
+            }
+            GameManager enmMatats = FindObjectOfType<GameManager>();
+            if (enmMatats.ScoreEnemic2() % 20 == 0)
+            {
+                DeixarRecollictable();
             }
         }
+
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject, 0.1f);
@@ -79,9 +76,22 @@ public class MovimentsEnemic2 : MonoBehaviour
         }
     }
 
-    void DeixarRecollictable2()
+    // Update is called once per frame
+    void Update()
+    {
+        if (Player != null)
+        {
+            Vector3 direccio = (Player.transform.position - rb.transform.position);
+            direccio.Normalize();
+            rb.velocity = direccio * velocitatEnemic;
+        }
+
+    }
+
+    void DeixarRecollictable()
     {
         // Instanciar el prefab del recogible de salud en la posición del enemigo
-        Destroy(Instantiate(prefabRecollictableEnemic2, transform.position, Quaternion.identity), 10.0f);
+        Destroy(Instantiate(prefabRecollictable, transform.position, Quaternion.identity), 10.0f);
     }
+
 }

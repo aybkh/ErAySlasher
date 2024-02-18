@@ -15,29 +15,21 @@ public class MovimentsEnemic1 : MonoBehaviour
 
     public GameObject prefabRecollictable;
 
-    [SerializeField]
-    private Slider slider;
+    public baraVidaEnemic1 baraVidaEnemic;
 
     // Start is called before the first frame update
     void Start()
     {
+        baraVidaEnemic.ConfigurarVidaMaxima(videsEnemic);
         rb = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag(tag);
-        if (slider != null)
-        {
-            slider.maxValue = videsEnemic;
-            slider.value = videsEnemic;
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "bala")
         {
             videsEnemic--;
-            if (slider != null)
-            {
-                slider.value = videsEnemic;
-            }
+            baraVidaEnemic.ActualizarVida(videsEnemic);
             GameManager controlador = FindObjectOfType<GameManager>();
             if (videsEnemic <= 0)
             {
@@ -55,11 +47,8 @@ public class MovimentsEnemic1 : MonoBehaviour
         }
         if (collision.gameObject.tag == "bala2")
         {
-            videsEnemic = videsEnemic - 2;
-            if (slider != null)
-            {
-                slider.value = videsEnemic;
-            }
+            videsEnemic -= 2;
+            baraVidaEnemic.ActualizarVida(videsEnemic);
 
             GameManager controlador = FindObjectOfType<GameManager>();
             if (videsEnemic <= 0)

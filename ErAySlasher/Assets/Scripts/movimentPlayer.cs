@@ -14,7 +14,7 @@ public class movimentPlayer : MonoBehaviour
     public GameObject arma2;
 
     public baraDeVida baraVidaJugador;
-    private bool arma2Activa = false;
+    private float powerUpArma = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,19 +86,25 @@ public class movimentPlayer : MonoBehaviour
             }
         }
         
-        if (collision.gameObject.tag == "recollictable" && !arma2Activa)
+        if (collision.gameObject.tag == "recollictable")
         {
             arma2.SetActive(true);
-            arma2Activa = true;
-            InvokeRepeating("DesactivarArma2", 5f, 5f);
         }
-
+        if (collision.gameObject.tag == "recollictable")
+        {
+            if (!arma2.activeSelf)
+            {
+                arma2.SetActive(true);
+                // Invoca el método DesactivarArma2 después de 5 segundos
+                Invoke("DesactivarArma2", powerUpArma);
+            }
+        }
     }
-    public void DesactivarArma2()
+    
+    // Método para desactivar arma2
+    void DesactivarArma2()
     {
         arma2.SetActive(false);
-        arma2Activa = false;
-        Debug.Log("Arma2 desactivada.");
     }
     public int Vides()
     {

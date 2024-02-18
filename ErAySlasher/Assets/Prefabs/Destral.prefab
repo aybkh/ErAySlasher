@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7805424, y: 0.1651, z: 0.3995037}
-  m_LocalScale: {x: 0.11517089, y: 0.11517089, z: 0.11517089}
+  m_LocalScale: {x: 0.16322018, y: 0.16322018, z: 0.16322018}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,7 +143,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -501,4 +501,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449995737c5e182499511da3d74f931a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatDestral: 7
+  velocitatDestral: 6
+  velocitatRotacio: 180

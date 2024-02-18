@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4411223866547707997}
   - component: {fileID: 8029610466637168665}
   - component: {fileID: 7506485557844560844}
-  - component: {fileID: 6917727121927851159}
+  - component: {fileID: 6977509038174188364}
   m_Layer: 0
   m_Name: Enemic2
   m_TagString: Enemic1
@@ -30,10 +30,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.81, y: 2.71, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.62523, y: 0.62523, z: 0.62523}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1044876158148036356}
+  - {fileID: 4668707719425641045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4411223866547707997
@@ -314,7 +315,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6917727121927851159
+--- !u!114 &6977509038174188364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,10 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbe0ff25e468f945bf654ea2669732a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatEnemic2: 0.3
-  player: {fileID: 5062027600983921548, guid: e9f16d7642431df438e3f16792e6d57a, type: 3}
-  prefabRecollictableEnemic2: {fileID: 2721619481800332968, guid: 854048ab5ba4ed1469c5976db3f41a20, type: 3}
-  slider: {fileID: 2772242779177585897}
+  velocitatEnemic: 0.5
+  Player: {fileID: 0}
+  prefabRecollictable: {fileID: 2721619481800332968, guid: 854048ab5ba4ed1469c5976db3f41a20, type: 3}
+  baraVidaEnemic: {fileID: 2455214169840354893}
 --- !u!1 &2987805744358888371
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4534733244970182514}
   - component: {fileID: 2772242779177585897}
-  - component: {fileID: 8360736302698362034}
-  - component: {fileID: 7112693169911493429}
+  - component: {fileID: 2455214169840354893}
   m_Layer: 5
   m_Name: BaraVida
   m_TagString: Untagged
@@ -367,8 +367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.01, y: -9.77}
-  m_SizeDelta: {x: 120, y: 39.53}
+  m_AnchoredPosition: {x: 40.8, y: -38.4}
+  m_SizeDelta: {x: 169.7, y: 54.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2772242779177585897
 MonoBehaviour:
@@ -433,7 +433,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8360736302698362034
+--- !u!114 &2455214169840354893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,40 +442,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2987805744358888371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f21787754840ba4c8ec2a47eb248428, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8bf26f701c1a84f9b3423e5fdc7bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocitatEnemic: 1
-  Player: {fileID: 0}
-  prefabRecollictable: {fileID: 0}
+  Enemic2: {fileID: 6977509038174188364}
   slider: {fileID: 2772242779177585897}
---- !u!50 &7112693169911493429
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2987805744358888371}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &4182227811572366619
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,3 +735,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8024805587969119225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4668707719425641045}
+  - component: {fileID: 4393363442730203049}
+  m_Layer: 0
+  m_Name: Destral
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4668707719425641045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024805587969119225}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.99688303, w: -0.07889432}
+  m_LocalPosition: {x: 0.34, y: -1.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4548317451741362939}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 189.05}
+--- !u!114 &4393363442730203049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024805587969119225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f135b7e662a27a4bb24c633d4d5fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Destral: {fileID: 1619557848952565509, guid: 8f43e7fed0a8f15408f3b5342fc02c23, type: 3}
