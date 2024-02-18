@@ -1406,6 +1406,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &412199453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412199454}
+  - component: {fileID: 412199455}
+  m_Layer: 0
+  m_Name: Generador Enemic3 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412199454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412199453}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.95122856, w: 0.30848715}
+  m_LocalPosition: {x: 17.9, y: 9.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1707345203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -144.064}
+--- !u!114 &412199455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412199453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dddc693f4cf9d428773500c4b55399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemic3: {fileID: 2819420276598289957, guid: 05a750545a17a604f8fcaa6f043124d5, type: 3}
 --- !u!1 &421006934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2406,7 @@ Transform:
   m_GameObject: {fileID: 706273210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9673636, w: 0.25339246}
-  m_LocalPosition: {x: 28.89, y: -15.07, z: 0}
+  m_LocalPosition: {x: 31, y: -11.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2636,7 +2681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be2b1c58cd70e44f9cc0f62a337957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bara: {fileID: 0}
 --- !u!1 &816152939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,7 +4385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23663a26c2968be4ebc4a187adf2dfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemic2: {fileID: 5755496105012855962, guid: 73dff36c378e971468cb60ec785ecbff, type: 3}
+  Enemic2: {fileID: 2605797416172461777, guid: 88f5a40123be8b146b07c7363fdffcae, type: 3}
 --- !u!1 &1232869364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5126,7 +5170,7 @@ MonoBehaviour:
   marcadorScore2: {fileID: 1598060634}
   puntuacioActual: {fileID: 1093055963}
   puntuacioRecord: {fileID: 1067212029}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 1767391332}
   MenuPause: {fileID: 0}
 --- !u!1 &1399436622
 GameObject:
@@ -5172,7 +5216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23663a26c2968be4ebc4a187adf2dfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemic2: {fileID: 5755496105012855962, guid: 73dff36c378e971468cb60ec785ecbff, type: 3}
+  Enemic2: {fileID: 2605797416172461777, guid: 88f5a40123be8b146b07c7363fdffcae, type: 3}
 --- !u!1 &1452830952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,7 +5233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1452830953
 Transform:
   m_ObjectHideFlags: 0
@@ -5198,13 +5242,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452830952}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.17, y: -11.79, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.3754845, w: 0.9268286}
+  m_LocalPosition: {x: 14.3, y: -22.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1707345203}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 44.108}
 --- !u!114 &1452830954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5214,10 +5258,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1452830952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23663a26c2968be4ebc4a187adf2dfcd, type: 3}
+  m_Script: {fileID: 11500000, guid: c6dddc693f4cf9d428773500c4b55399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemic2: {fileID: 2819420276598289957, guid: 05a750545a17a604f8fcaa6f043124d5, type: 3}
+  Enemic3: {fileID: 2819420276598289957, guid: 05a750545a17a604f8fcaa6f043124d5, type: 3}
 --- !u!1 &1469903870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,8 +6308,10 @@ Transform:
   - {fileID: 1805290202}
   - {fileID: 1671253498}
   - {fileID: 1232197907}
+  - {fileID: 2032046686}
   - {fileID: 1399436623}
   - {fileID: 1452830953}
+  - {fileID: 412199454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 43.08}
 --- !u!1 &1708334282
@@ -7308,6 +7354,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2032046685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032046686}
+  - component: {fileID: 2032046687}
+  m_Layer: 0
+  m_Name: Generador Enemic 2 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032046686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032046685}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.8314792, w: 0.555556}
+  m_LocalPosition: {x: 29.7, y: -12.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1707345203}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 112.502}
+--- !u!114 &2032046687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032046685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23663a26c2968be4ebc4a187adf2dfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemic2: {fileID: 2605797416172461777, guid: 88f5a40123be8b146b07c7363fdffcae, type: 3}
 --- !u!1 &2052342997
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneradorEnemics1 : MonoBehaviour
+public class GeneradorEnemics3 : MonoBehaviour
 {
-    public GameObject Enemic1;
+    public GameObject Enemic3;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +14,15 @@ public class GeneradorEnemics1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void CreaEnemic()
     {
-            Instantiate(Enemic1, this.transform.position, this.transform.rotation);
+        GameManager contador = FindObjectOfType<GameManager>();
+        if (contador.DonarPunts() >= 50 && contador.ScoreEnemic2() >= 10)
+        {
+            Instantiate(Enemic3, this.transform.position, this.transform.rotation);
+        }
     }
 }
