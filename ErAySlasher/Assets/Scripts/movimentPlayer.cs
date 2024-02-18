@@ -76,6 +76,16 @@ public class movimentPlayer : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+        if (collision.gameObject.tag == "bala3")
+        {
+            vides--;
+            baraVidaJugador.ActualizarVida(vides);
+            if (vides <= 0)
+            {
+                Destroy(this.gameObject);
+                Destroy(collision.gameObject);
+            }
+        }
         if (collision.gameObject.tag == "Enemic3")
         {
             vides = vides - 2;

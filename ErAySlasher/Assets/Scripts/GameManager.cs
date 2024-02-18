@@ -10,11 +10,10 @@ public class GameManager : MonoBehaviour
 {
     public movimentPlayer Player;
 
-    public MovimentsEnemic1 Enemic1;
-    public MovimentsEnemic2 Enemic2;
-
     public TextMeshProUGUI marcadorScore;
     public TextMeshProUGUI marcadorScore2;
+    public TextMeshProUGUI marcadorScore3;
+
 
 
     public TextMeshProUGUI puntuacioActual;
@@ -26,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     private int puntuacio;
     private int puntuacioE2;
+    private int puntuacioE3;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     }
     public void sumaScoreEnemic1(int punts)
     {
-        puntuacio = puntuacio + punts;
+        puntuacio  += punts;
     }
     public int DonarPunts()
     {
@@ -61,12 +61,21 @@ public class GameManager : MonoBehaviour
     }
     public void sumaScoreEnemic2(int puntsEnemic2)
     {
-        puntuacioE2 = puntuacioE2 + puntsEnemic2;
+        puntuacioE2 += puntsEnemic2;
 
     }
     public int ScoreEnemic2()
     {
         return puntuacioE2;
+    }
+    public void sumaScoreEnemic3(int puntsEnemic3)
+    {
+        puntuacioE3 += puntsEnemic3;
+
+    }
+    public int ScoreEnemic3()
+    {
+        return puntuacioE3;
     }
     public void TornarJugar()
     {

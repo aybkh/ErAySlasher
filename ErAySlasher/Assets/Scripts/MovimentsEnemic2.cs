@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MovimentsEnemic2 : MonoBehaviour
 {
@@ -16,6 +15,7 @@ public class MovimentsEnemic2 : MonoBehaviour
     public GameObject prefabRecollictable;
 
     public baraVidaEnemic2 baraVidaEnemic;
+    Transform player;  // Referencia al jugador
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,8 @@ public class MovimentsEnemic2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag(tag);
         baraVidaEnemic.ConfigurarVidaMaxima(videsEnemic2);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -62,6 +64,7 @@ public class MovimentsEnemic2 : MonoBehaviour
             GameManager enmMatats = FindObjectOfType<GameManager>();
             if (enmMatats.ScoreEnemic2() % 20 == 0)
             {
+                videsEnemic2++;
                 DeixarRecollictable();
             }
         }
@@ -79,6 +82,9 @@ public class MovimentsEnemic2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        transform.up = directionToPlayer;
         if (Player != null)
         {
             Vector3 direccio = (Player.transform.position - rb.transform.position);

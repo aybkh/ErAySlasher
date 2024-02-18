@@ -502,4 +502,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocitatDestral: 6
-  velocitatRotacio: 180
+  velocitatRotacio: 30

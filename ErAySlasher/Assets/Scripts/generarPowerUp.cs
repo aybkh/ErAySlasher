@@ -8,7 +8,7 @@ public class GenerarPowerUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("GeneradorPowerUp", 45f, 30f);
+        InvokeRepeating("GeneradorPowerUp", 60f, 30f);
     }
 
     // Update is called once per frame

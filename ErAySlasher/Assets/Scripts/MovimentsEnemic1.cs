@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MovimentsEnemic1 : MonoBehaviour
 {
@@ -17,12 +16,29 @@ public class MovimentsEnemic1 : MonoBehaviour
 
     public baraVidaEnemic1 baraVidaEnemic;
 
+    Transform player;  // Referencia al jugador
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         baraVidaEnemic.ConfigurarVidaMaxima(videsEnemic);
         rb = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag(tag);
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Player != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            Vector2 directionToPlayer = (player.position - transform.position).normalized;
+            transform.up = directionToPlayer;
+            Vector3 direccio = (Player.transform.position - rb.transform.position);
+            direccio.Normalize();
+            rb.velocity = direccio * velocitatEnemic;
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -37,13 +53,11 @@ public class MovimentsEnemic1 : MonoBehaviour
                 Destroy(collision.gameObject);
                 controlador.sumaScoreEnemic1(punts);
                 if (controlador.DonarPunts() % 10 == 0)
-                    {
-                        DeixarRecollictable();
-                    }
-                this.gameObject.SetActive(false);
+                {
+                    videsEnemic++;
+                    DeixarRecollictable();
+                }
             }
-
-
         }
         if (collision.gameObject.tag == "bala2")
         {
@@ -60,7 +74,8 @@ public class MovimentsEnemic1 : MonoBehaviour
             GameManager enmMatats = FindObjectOfType<GameManager>();
             if (enmMatats.DonarPunts() % 10 == 0)
             {
-                DeixarRecollictable();
+                videsEnemic++;
+                Invoke("DeixarRecollictable", 0.1f);
             }
         }
 
@@ -72,18 +87,6 @@ public class MovimentsEnemic1 : MonoBehaviour
         {
             Destroy(this.gameObject, 0.1f);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Player != null)
-        {
-            Vector3 direccio = (Player.transform.position - rb.transform.position);
-            direccio.Normalize();
-            rb.velocity = direccio * velocitatEnemic;
-        }
-        
     }
 
     void DeixarRecollictable()
