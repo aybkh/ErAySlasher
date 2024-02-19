@@ -12,9 +12,11 @@ public class movimentPlayer : MonoBehaviour
     public float velocitatMoviment = 8f;
     public float velocitatRotacio;
     public GameObject arma2;
+    public GameObject arma3;
 
     public baraDeVida baraVidaJugador;
     private float powerUpArma = 5f;
+    public UnityEvent OnHealthChanged;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,11 @@ public class movimentPlayer : MonoBehaviour
                 // Mover al jugador en la dirección calculada
         transform.position += moviment * velocitatMoviment * Time.deltaTime;
     }
-
+    public void RestaurarSalud()
+    {
+        vides++;
+        vides = Mathf.Min(vides, 100);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemic1")
@@ -95,26 +101,34 @@ public class movimentPlayer : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        
-        if (collision.gameObject.tag == "recollictable")
+        if (collision.gameObject.tag == "recollictable3")
         {
-            arma2.SetActive(true);
+            arma3.SetActive(true);
+            Invoke("DesactivarArma3", powerUpArma);
+        }
+        if (collision.gameObject.tag == "recollictable2")
+        {
+            RestaurarSalud();
+            OnHealthChanged.Invoke();
         }
         if (collision.gameObject.tag == "recollictable")
         {
             if (!arma2.activeSelf)
             {
                 arma2.SetActive(true);
-                // Invoca el método DesactivarArma2 después de 5 segundos
                 Invoke("DesactivarArma2", powerUpArma);
             }
         }
     }
-    
+
     // Método para desactivar arma2
     void DesactivarArma2()
     {
         arma2.SetActive(false);
+    }
+    void DesactivarArma3()
+    {
+        arma3.SetActive(false);
     }
     public int Vides()
     {

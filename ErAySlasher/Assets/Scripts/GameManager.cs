@@ -18,9 +18,12 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI puntuacioActual;
     public TextMeshProUGUI puntuacioRecord;
+    public TextMeshProUGUI puntuacioActual2;
+    public TextMeshProUGUI puntuacioRecord2;
+    public TextMeshProUGUI puntuacioActual3;
+    public TextMeshProUGUI puntuacioRecord3;
     public GameObject gameOver;
 
-    public GameObject MenuPause;
 
 
     private int puntuacio;
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         marcadorScore.text = " " + DonarPunts();
         marcadorScore2.text = " " + ScoreEnemic2();
+        marcadorScore3.text = " " + ScoreEnemic3();
 
         if ((Player.Vides() <= 0) && (gameOver.activeSelf == false))
         {
@@ -49,6 +53,20 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.SetInt("Record", puntuacio);
             }
             puntuacioRecord.text = PlayerPrefs.GetInt("Record").ToString();
+
+            puntuacioActual2.text = puntuacioE2.ToString();
+            if (PlayerPrefs.GetInt("Record2") < puntuacioE2)
+            {
+                PlayerPrefs.SetInt("Record2", puntuacioE2);
+            }
+            puntuacioRecord2.text = PlayerPrefs.GetInt("Record2").ToString();
+
+            puntuacioActual3.text = puntuacioE3.ToString();
+            if (PlayerPrefs.GetInt("Record3") < puntuacioE3)
+            {
+                PlayerPrefs.SetInt("Record3", puntuacioE3);
+            }
+            puntuacioRecord3.text = PlayerPrefs.GetInt("Record3").ToString();
         }
     }
     public void sumaScoreEnemic1(int punts)

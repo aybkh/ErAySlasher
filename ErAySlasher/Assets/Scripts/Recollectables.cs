@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Recollectables : MonoBehaviour
-{   //public int QuantsVides = 1;
-    //    public GameObject arma2;
-
+{ 
     // Start is called before the first frame update
     void Start()
     {
@@ -26,4 +24,5 @@ public class Recollectables : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 209789888192134632}
   m_Layer: 0
   m_Name: element2
-  m_TagString: recollictable
+  m_TagString: recollictable2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,6 +16,8 @@ TagManager:
   - recollictable
   - bala2
   - bala3
+  - recollictable2
+  - recollictable3
   layers:
   - Default
   - TransparentFX
