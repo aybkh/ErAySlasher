@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8029610466637168665}
   - component: {fileID: 7506485557844560844}
   - component: {fileID: 6977509038174188364}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Enemic2
   m_TagString: Enemic1
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 4534733244970182514}
   - component: {fileID: 2772242779177585897}
   - component: {fileID: 2455214169840354893}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: BaraVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 4993077591169923364}
   - component: {fileID: 3879677988824116823}
   - component: {fileID: 6654050870848507636}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 7743047079008727373}
   - component: {fileID: 3482928971600830491}
   - component: {fileID: 1131655410918756539}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4816638097427793775}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 7444252342543054548}
   - component: {fileID: 9175162084698406555}
   - component: {fileID: 5955523033022401395}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4668707719425641045}
   - component: {fileID: 4393363442730203049}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Destral
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}

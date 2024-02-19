@@ -65,6 +65,7 @@ public class MovimentsEnemic2 : MonoBehaviour
             {
                 videsEnemic2++;
                 DeixarRecollictable();
+                baraVidaEnemic.ActualizarVida(videsEnemic2);
             }
         }
 
@@ -81,9 +82,9 @@ public class MovimentsEnemic2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        //Vector2 directionToPlayer = (player.position - transform.position).normalized;
-        //transform.up = directionToPlayer;
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        transform.up = directionToPlayer;
         if (Player != null)
         {
             Vector3 direccio = (Player.transform.position - rb.transform.position);
