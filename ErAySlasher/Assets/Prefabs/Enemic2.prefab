@@ -323,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocitatEnemic: 0.5
   Player: {fileID: 0}
+  ScoreEnemic2: {fileID: 0}
   prefabRecollictable: {fileID: 2721619481800332968, guid: 854048ab5ba4ed1469c5976db3f41a20, type: 3}
   baraVidaEnemic: {fileID: 2455214169840354893}
 --- !u!1 &2987805744358888371
@@ -745,7 +746,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4668707719425641045
 Transform:
   m_ObjectHideFlags: 0
@@ -773,4 +774,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f135b7e662a27a4bb24c633d4d5fe12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreEnemic2: {fileID: 0}
   Destral: {fileID: 1619557848952565509, guid: 8f43e7fed0a8f15408f3b5342fc02c23, type: 3}
