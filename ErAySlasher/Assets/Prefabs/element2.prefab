@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5055714387935221640}
   - component: {fileID: 699345886420205978}
   - component: {fileID: 209789888192134632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: element2
   m_TagString: recollictable2
   m_Icon: {fileID: 0}

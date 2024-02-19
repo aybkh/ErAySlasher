@@ -529,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Moviments
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1424,6 +1424,10 @@ MonoBehaviour:
   marcadorScore3: {fileID: 0}
   puntuacioActual: {fileID: 0}
   puntuacioRecord: {fileID: 0}
+  puntuacioActual2: {fileID: 0}
+  puntuacioRecord2: {fileID: 0}
+  puntuacioActual3: {fileID: 0}
+  puntuacioRecord3: {fileID: 0}
   gameOver: {fileID: 0}
 --- !u!4 &976569353
 Transform:
@@ -1632,7 +1636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recol\xB7lictables"
+  m_text: "Recol\xB7lectables"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

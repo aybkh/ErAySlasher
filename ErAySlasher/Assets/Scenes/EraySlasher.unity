@@ -1802,7 +1802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412199454}
   - component: {fileID: 412199455}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2111,7 +2111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454532254}
   - component: {fileID: 454532253}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2762,7 +2762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706273212}
   - component: {fileID: 706273211}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3096,7 +3096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150.4, y: -20}
+  m_AnchoredPosition: {x: 150.39996, y: -20}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.4999996, y: 0.5}
 --- !u!114 &761230267
@@ -5085,7 +5085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232197907}
   - component: {fileID: 1232197908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5859,7 +5859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399436623}
   - component: {fileID: 1399436624}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5904,7 +5904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1452830953}
   - component: {fileID: 1452830954}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6649,7 +6649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608292018}
   - component: {fileID: 1608292019}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6869,7 +6869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671253498}
   - component: {fileID: 1671253499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7007,7 +7007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1707345203}
   - component: {fileID: 1707345202}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GeneradorEnemics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7316,7 +7316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805290202}
   - component: {fileID: 1805290203}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8563,7 +8563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032046686}
   - component: {fileID: 2032046687}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Generador Enemic 2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

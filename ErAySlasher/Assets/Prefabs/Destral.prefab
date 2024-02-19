@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6130203091931885623}
   - component: {fileID: 6223688398300510403}
   - component: {fileID: 5025862846604766159}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destral
   m_TagString: Destral
   m_Icon: {fileID: 0}
@@ -502,4 +502,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocitatDestral: 6
-  velocitatRotacio: 30

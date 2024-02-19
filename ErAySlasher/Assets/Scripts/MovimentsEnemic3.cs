@@ -33,9 +33,9 @@ public class MovimentsEnemic3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        Vector2 directionToPlayer = (player.position - transform.position).normalized;
-        transform.up = directionToPlayer;
+        //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        //Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        //transform.up = directionToPlayer;
 
         // Si el jugador no está cerca, muévete aleatoriamente
         transform.position = Vector2.MoveTowards(transform.position, miPosicio, velocitat * Time.deltaTime);

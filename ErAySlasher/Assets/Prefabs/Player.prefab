@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6526830843214074323}
   - component: {fileID: 63042830717369586}
   - component: {fileID: 2300603660570140912}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +133,9 @@ MonoBehaviour:
   vides: 10
   velocitatMoviment: 7
   velocitatRotacio: 720
+  arma2: {fileID: 0}
+  arma3: {fileID: 0}
+  baraVidaJugador: {fileID: 0}
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls:

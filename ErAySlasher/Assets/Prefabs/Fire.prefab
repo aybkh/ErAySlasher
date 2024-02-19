@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9194156329547698854}
   - component: {fileID: 6163233690134265396}
   - component: {fileID: 7131730193532149716}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Fire
   m_TagString: bala3
   m_Icon: {fileID: 0}

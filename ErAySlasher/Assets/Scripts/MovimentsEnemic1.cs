@@ -31,9 +31,9 @@ public class MovimentsEnemic1 : MonoBehaviour
     {
         if (Player != null)
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            Vector2 directionToPlayer = (player.position - transform.position).normalized;
-            transform.up = directionToPlayer;
+            //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            //Vector2 directionToPlayer = (player.position - transform.position).normalized;
+            //transform.up = directionToPlayer;
             Vector3 direccio = (Player.transform.position - rb.transform.position);
             direccio.Normalize();
             rb.velocity = direccio * velocitatEnemic;
