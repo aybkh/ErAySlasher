@@ -9,7 +9,7 @@ public class MovimentsEnemic2 : MonoBehaviour
     public GameObject Player;
     private Rigidbody2D rb;
     string tag = "Player";
-
+    public GameManager ScoreEnemic2;
     private int punts = 1;
 
     public GameObject prefabRecollictable;
@@ -52,7 +52,6 @@ public class MovimentsEnemic2 : MonoBehaviour
         {
             videsEnemic2 = videsEnemic2 - 2;
             baraVidaEnemic.ActualizarVida(videsEnemic2);
-
 
             GameManager controlador = FindObjectOfType<GameManager>();
             if (videsEnemic2 <= 0)

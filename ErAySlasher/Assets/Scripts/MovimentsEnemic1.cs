@@ -9,6 +9,7 @@ public class MovimentsEnemic1 : MonoBehaviour
     public GameObject Player;
     private Rigidbody2D rb;
     string tag = "Player";
+    public GameManager DonarPunts;
     
     private int punts = 1;
 
