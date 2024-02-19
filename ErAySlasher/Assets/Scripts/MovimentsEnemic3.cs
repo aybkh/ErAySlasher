@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovimentsEnemic3 : MonoBehaviour
 {
-    string tag = "Player";
     public int videsEnemic3 = 4;
     private int punts = 1;
 
@@ -33,9 +32,9 @@ public class MovimentsEnemic3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        //Vector2 directionToPlayer = (player.position - transform.position).normalized;
-        //transform.up = directionToPlayer;
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        transform.up = directionToPlayer;
 
         // Si el jugador no está cerca, muévete aleatoriamente
         transform.position = Vector2.MoveTowards(transform.position, miPosicio, velocitat * Time.deltaTime);
@@ -65,7 +64,9 @@ public class MovimentsEnemic3 : MonoBehaviour
                 controlador.sumaScoreEnemic3(punts);
                 if (controlador.ScoreEnemic3() % 30 == 0)
                 {
+                    videsEnemic3 += 1;
                     DeixarRecollictable();
+                    baraVidaEnemic3.ActualizarVida(videsEnemic3);
                 }
                 this.gameObject.SetActive(false);
             }
