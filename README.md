@@ -1,6 +1,6 @@
 # 🔥 ERAY Slasher – Roguelite Shooter
 
-![Gameplay Screenshot](<img width="1536" height="923" alt="Image" src="https://github.com/user-attachments/assets/2089d936-ba9d-4b63-bf2a-2491ec1f4573" />)
+<img width="1536" height="923" alt="Image" src="https://github.com/user-attachments/assets/2089d936-ba9d-4b63-bf2a-2491ec1f4573" />
 
 ## 🧩 Descripción
 **ERAY Slasher** es un videojuego de acción *roguelite* creado con **Unity**.  
