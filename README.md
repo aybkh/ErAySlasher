@@ -29,7 +29,7 @@ Descárgalo y ejecútalo para probar el juego de forma gratuita.
 
 ## 🎥 Demostración
 Puedes ver la prueba del juego en YouTube:  
-👉 [Ver gameplay](link_a_tu_video)
+👉 [Ver gameplay][(link_a_tu_video)](https://www.youtube.com/watch?v=6pVS-j7JV-E)
 
 ## 👤 Autor
 Desarrollado por **Ayoub El Khalifi**  
