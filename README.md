@@ -29,10 +29,10 @@ Descárgalo y ejecútalo para probar el juego de forma gratuita.
 
 ## 🎥 Demostración
 Puedes ver la prueba del juego en YouTube:  
-👉 [Ver gameplay][(link_a_tu_video)](https://www.youtube.com/watch?v=6pVS-j7JV-E)
+👉 [Ver gameplay](https://www.youtube.com/watch?v=6pVS-j7JV-E)
 
-Probar el juego:
-🎮 [Link Descarga][(link_a_tu_video)](https://drive.usercontent.google.com/download?id=1S7YKKD9CVOgamoKCzbQNNVbUkqhsz_2p&export=download&authuser=0)
+Probar el juego:  
+🎮 [Link Descarga](https://drive.usercontent.google.com/download?id=1S7YKKD9CVOgamoKCzbQNNVbUkqhsz_2p&export=download&authuser=0)
 
 ## 👤 Autor
 Desarrollado por **Ayoub El Khalifi**  
